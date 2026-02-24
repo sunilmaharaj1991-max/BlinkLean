@@ -4,7 +4,7 @@ services:
     env: docker
     region: singapore
     plan: free
-    dockerContext: ./blinklean-backend
+    dockerContext: .
     dockerfilePath: blinklean-backend/Dockerfile
     envVars:
       - key: PORT
@@ -34,7 +34,7 @@ services:
     env: docker
     region: singapore
     plan: free
-    dockerContext: ./blinklean-ai
+    dockerContext: .
     dockerfilePath: blinklean-ai/Dockerfile
     envVars:
       - key: PORT
