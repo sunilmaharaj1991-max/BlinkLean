@@ -25,7 +25,7 @@ export class ScrapBooking {
     @Column()
     pincode: string;
 
-    @Column('jsonb')
+    @Column('simple-json')
     items: Array<{ material_name: string; estimated_weight: number }>;
 
     @Column({
