@@ -1,189 +1,172 @@
-/* --- How It Works Premium Experience --- */
+/* --- App Experience (New How It Works) --- */
 .how-it-works-premium {
-    padding: var(--section-padding);
-    background: #fdfdfd;
+    padding: 100px 0;
+    background: #ffffff;
     position: relative;
     overflow: hidden;
 }
 
-.how-it-works-premium .section-header {
-    text-align: center;
-    margin-bottom: 80px;
-}
-
-.how-it-works-premium .section-header h2 {
-    font-size: 2.5rem;
-    color: var(--primary);
-    margin-bottom: 12px;
-    font-weight: 800;
-}
-
-.how-it-works-premium .section-header p {
-    color: var(--text-muted);
-    font-size: 1.1rem;
-    max-width: 600px;
-    margin: 0 auto;
-}
-
-.step-flow-container {
-    position: relative;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-/* Connecting Line (Desktop) */
-.step-connecting-line {
-    position: absolute;
-    top: 60px;
-    left: 15%;
-    right: 15%;
-    height: 3px;
-    background: linear-gradient(to right, rgba(15, 76, 63, 0.05) 0%, var(--primary) 50%, rgba(15, 76, 63, 0.05) 100%);
-    opacity: 0.2;
-    z-index: 1;
-}
-
-.steps-grid {
+.app-experience-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 40px;
-    position: relative;
-    z-index: 2;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+    margin-top: 60px;
 }
 
-/* Premium Step Card */
-.premium-step-card {
-    background: var(--white);
-    padding: 40px 30px;
-    border-radius: 24px;
-    text-align: center;
-    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    box-shadow: 0 15px 45px -10px rgba(0, 0, 0, 0.05);
-    border: 1px solid rgba(0, 0, 0, 0.02);
+.app-feature-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    gap: 30px;
 }
 
-.premium-step-card:hover {
-    transform: translateY(-15px);
-    box-shadow: 0 35px 70px -15px rgba(15, 76, 63, 0.15);
+.app-step {
+    display: flex;
+    gap: 24px;
+    padding: 30px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: var(--transition);
+    border: 1px solid transparent;
 }
 
-/* Step Badge Indicator */
-.step-badge {
+.app-step.active {
+    background: #f8fafc;
+    border-color: rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+}
+
+.app-step.active .step-num {
+    background: var(--primary);
+    color: var(--white);
+}
+
+.step-num {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, var(--primary) 0%, #059669 100%);
-    color: var(--white);
+    background: #f1f5f9;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     font-weight: 800;
-    margin-bottom: 30px;
-    box-shadow: 0 8px 20px rgba(15, 76, 63, 0.3);
-    position: relative;
-    transition: all 0.3s ease;
-}
-
-.premium-step-card:hover .step-badge {
-    transform: scale(1.1);
-    box-shadow: 0 12px 25px rgba(15, 76, 63, 0.4);
-}
-
-.step-icon-inner {
-    width: 100px;
-    height: 100px;
-    background: #f0fdf4;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 25px;
-    transition: all 0.3s ease;
-}
-
-.premium-step-card:hover .step-icon-inner {
-    background: var(--primary);
-    transform: rotate(5deg);
-}
-
-.step-icon-inner i {
-    width: 40px;
-    height: 40px;
-    color: var(--primary);
-    transition: all 0.3s ease;
-}
-
-.premium-step-card:hover .step-icon-inner i {
-    color: var(--white);
-}
-
-.premium-step-card h3 {
-    font-size: 1.4rem;
-    color: var(--primary);
-    margin-bottom: 15px;
-    font-weight: 700;
-}
-
-.premium-step-card p {
-    font-size: 0.95rem;
     color: var(--text-muted);
-    line-height: 1.6;
+    flex-shrink: 0;
+    transition: var(--transition);
 }
 
-/* Trust Micro-Badges */
-.step-trust-footer {
+.step-txt h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+    color: var(--primary);
+}
+
+/* Phone Mockup */
+.phone-mockup-wrapper {
+    position: relative;
     display: flex;
     justify-content: center;
-    gap: 30px;
-    margin-top: 60px;
-    flex-wrap: wrap;
-}
-
-.trust-micro-badge {
-    display: flex;
     align-items: center;
-    gap: 8px;
-    font-size: 0.85rem;
-    color: var(--primary);
-    font-weight: 700;
-    background: rgba(15, 76, 63, 0.04);
-    padding: 8px 16px;
-    border-radius: 100px;
-    transition: all 0.3s ease;
 }
 
-.trust-micro-badge:hover {
+.phone-mockup {
+    width: 320px;
+    height: 650px;
+    background: #000;
+    border-radius: 40px;
+    padding: 12px;
+    box-shadow: 0 50px 100px -20px rgba(0, 0, 0, 0.3);
+    position: relative;
+    z-index: 2;
+}
+
+.phone-frame {
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    border-radius: 30px;
+    overflow: hidden;
+    position: relative;
+}
+
+.phone-screen {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.screen-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.screen-img.active {
+    opacity: 1;
+}
+
+/* Background Blobs */
+.floating-blobs {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.blob {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    filter: blur(80px);
+    border-radius: 50%;
+    opacity: 0.15;
+    animation: blob-drift 10s infinite alternate;
+}
+
+.blob.green {
     background: var(--primary);
-    color: var(--white);
-    transform: translateY(-2px);
+    top: -100px;
+    right: -100px;
 }
 
-.trust-micro-badge i {
-    width: 16px;
-    height: 16px;
+.blob.lime {
+    background: var(--accent);
+    bottom: -100px;
+    left: -100px;
+    animation-delay: -5s;
 }
 
-/* Responsiveness */
-@media (max-width: 991px) {
-    .step-connecting-line {
-        display: none;
+@keyframes blob-drift {
+    from {
+        transform: translate(0, 0) scale(1);
     }
 
-    .steps-grid {
-        grid-template-columns: repeat(2, 1fr);
+    to {
+        transform: translate(50px, 50px) scale(1.1);
     }
 }
 
-@media (max-width: 767px) {
-    .steps-grid {
+@media (max-width: 968px) {
+    .app-experience-grid {
         grid-template-columns: 1fr;
+        gap: 60px;
     }
 
-    .premium-step-card {
-        padding: 40px 20px;
+    .phone-mockup {
+        width: 280px;
+        height: 580px;
+    }
+
+    .app-feature-list {
+        order: 2;
     }
 }

@@ -213,7 +213,39 @@
         </div>
     </footer>
 
-    <script>lucide.createIcons();</script>
+    <script>
+        lucide.createIcons();
+
+        // Magnetic Button Effect
+        const magneticButtons = document.querySelectorAll('.btn-primary, .btn-full');
+        magneticButtons.forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const position = btn.getBoundingClientRect();
+                const x = e.clientX - position.left - position.width / 2;
+                const y = e.clientY - position.top - position.height / 2;
+                btn.style.transform = `translate(${x * 0.3}px, ${y * 0.5}px)`;
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0px, 0px)';
+            });
+        });
+
+        // Page Scroll Progress Bar
+        const scrollProgress = document.createElement('div');
+        scrollProgress.style.cssText = `
+            position: fixed; top: 0; left: 0; height: 3px;
+            background: linear-gradient(to right, #009EE3, #1B9B3A);
+            z-index: 10001; transition: width 0.1s ease; width: 0%;
+        `;
+        document.body.appendChild(scrollProgress);
+
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            scrollProgress.style.width = scrolled + "%";
+        });
+    </script>
 </body>
 
 </html>
