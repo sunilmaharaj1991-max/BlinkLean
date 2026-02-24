@@ -2,13 +2,17 @@ import { Injectable, NotFoundException } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
 import { ScrapRate } from './scrap-rate.entity';
+import { ScrapBooking } from './scrap-booking.entity';
 import { CalculateScrapDto, ScrapItemDto } from './dto/calculate-scrap.dto';
+import { CreateScrapBookingDto } from './dto/create-scrap-booking.dto';
 
 @Injectable()
 export class ScrapService {
     constructor(
         @InjectRepository(ScrapRate)
         private scrapRateRepository: Repository<ScrapRate>,
+        @InjectRepository(ScrapBooking)
+        private scrapBookingRepository: Repository<ScrapBooking>,
     ) { }
 
     // Helper method to simulate AI prediction or fetch from market logic
@@ -70,5 +74,13 @@ export class ScrapService {
             items: itemsDetails,
             message: 'Estimated value is based on current market rates. Final value will be confirmed at pickup.',
         };
+    }
+    async createBooking(dto: CreateScrapBookingDto) {
+        const booking = this.scrapBookingRepository.create(dto);
+        return this.scrapBookingRepository.save(booking);
+    }
+
+    async getBookingById(id: number) {
+        return this.scrapBookingRepository.findOne({ where: { id } });
     }
 }
