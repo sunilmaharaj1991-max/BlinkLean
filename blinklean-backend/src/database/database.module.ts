@@ -1,22 +1,26 @@
 import { Module } from '@nestjs/common';
 import { TypeOrmModule } from '@nestjs/typeorm';
+import { ConfigModule, ConfigService } from '@nestjs/config';
 
 @Module({
   imports: [
     TypeOrmModule.forRootAsync({
-      useFactory: () => {
+      imports: [ConfigModule],
+      inject: [ConfigService],
+      useFactory: (configService: ConfigService) => {
+        const dbUrl = configService.get<string>('DATABASE_URL');
         const config: any = {
           autoLoadEntities: true,
-          synchronize: true, // Auto-migration (be careful in production)
+          synchronize: true,
         };
 
-        if (process.env.DATABASE_URL) {
-          console.log('Connecting to PostgreSQL database...');
+        if (dbUrl) {
+          console.log('DATABASE_URL found. Connecting to PostgreSQL...');
           config.type = 'postgres';
-          config.url = process.env.DATABASE_URL;
+          config.url = dbUrl;
           config.ssl = { rejectUnauthorized: false };
         } else {
-          console.log('DATABASE_URL not found, falling back to local SQLite...');
+          console.log('DATABASE_URL not found. Falling back to SQLite...');
           config.type = 'sqlite';
           config.database = 'blinklean.sqlite';
         }

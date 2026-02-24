@@ -29,8 +29,7 @@ export class ScrapBooking {
     items: Array<{ material_name: string; estimated_weight: number }>;
 
     @Column({
-        type: 'enum',
-        enum: ScrapBookingStatus,
+        type: 'varchar',
         default: ScrapBookingStatus.PENDING,
     })
     status: ScrapBookingStatus;
