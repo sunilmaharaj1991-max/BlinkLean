@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans | BlinKlean</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="pricing.css">
+    <style>
+        .pricing-hero {
+            padding: 120px 0 60px;
+            background: #fff;
+            text-align: center;
+        }
+
+        .price-list-section {
+            padding: 60px 0;
+            background: #f9f9f9;
+        }
+
+        .price-table {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .price-table th,
+        .price-table td {
+            padding: 20px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .price-table th {
+            background: var(--primary);
+            color: var(--white);
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <div class="logo-text">Blin<span>Klean</span></div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="pricing.html" class="active">Pricing</a>
+                <a href="booking.html" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="pricing-hero">
+        <div class="container">
+            <h1>Simple, Transparent Pricing</h1>
+            <p>No hidden charges. No surprises. Just sparkling clean spaces.</p>
+        </div>
+    </header>
+
+    <!-- Subscription Plans (Reused from logic) -->
+    <section class="pricing-section">
+        <div class="container">
+            <div class="pricing-grid">
+                <!-- Bike Wash Plan -->
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Bike Wash Monthly</h3>
+                        <div class="plan-price">₹499<span>/mo</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i data-lucide="check-circle"></i> 4 Professional washes</li>
+                        <li><i data-lucide="check-circle"></i> Chain cleaning & lubing</li>
+                        <li><i data-lucide="check-circle"></i> Doorstep service</li>
+                    </ul>
+                    <a href="booking.html" class="btn btn-secondary">Choose Plan</a>
+                </div>
+
+                <!-- Car Wash Plan (Featured) -->
+                <div class="pricing-card featured">
+                    <div class="popular-badge">Most Popular</div>
+                    <div class="plan-header">
+                        <h3>Car Care Monthly</h3>
+                        <div class="plan-price">₹1,299<span>/mo</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i data-lucide="check-circle"></i> 4 Interior & Exterior washes</li>
+                        <li><i data-lucide="check-circle"></i> Dashboard polishing</li>
+                        <li><i data-lucide="check-circle"></i> Tire dressing</li>
+                    </ul>
+                    <a href="booking.html" class="btn btn-primary">Choose Plan</a>
+                </div>
+
+                <!-- Premium Home Care -->
+                <div class="pricing-card">
+                    <div class="plan-header">
+                        <h3>Premium Home Care</h3>
+                        <div class="plan-price">₹3,499<span>/mo</span></div>
+                    </div>
+                    <ul class="plan-features">
+                        <li><i data-lucide="check-circle"></i> 1 Full Deep Cleaning</li>
+                        <li><i data-lucide="check-circle"></i> 2 Maintenance cleanings</li>
+                        <li><i data-lucide="check-circle"></i> Pest control voucher</li>
+                    </ul>
+                    <a href="booking.html" class="btn btn-secondary">Choose Plan</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Individual Service Price List -->
+    <section class="price-list-section">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Individual Service Rates</h2>
+            <table class="price-table">
+                <thead>
+                    <tr>
+                        <th>Service</th>
+                        <th>Price</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Bathroom Deep Cleaning</td>
+                        <td>₹499</td>
+                    </tr>
+                    <tr>
+                        <td>Kitchen Deep Cleaning</td>
+                        <td>₹1,299</td>
+                    </tr>
+                    <tr>
+                        <td>Sofa Deep Cleaning (per seat)</td>
+                        <td>₹199</td>
+                    </tr>
+                    <tr>
+                        <td>Full Home Deep Cleaning (1BHK)</td>
+                        <td>₹2,499</td>
+                    </tr>
+                    <tr>
+                        <td>Full Home Deep Cleaning (2BHK)</td>
+                        <td>₹3,499</td>
+                    </tr>
+                    <tr>
+                        <td>Car Interior Detailing</td>
+                        <td>₹899</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 BlinKlean. Clean in a Blink.</p>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

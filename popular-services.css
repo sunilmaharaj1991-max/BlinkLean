@@ -1,0 +1,146 @@
+/* --- Popular Services --- */
+.popular-services {
+    padding: var(--section-padding);
+    background: var(--white);
+}
+
+.popular-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+}
+
+.popular-card {
+    background: var(--background);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    display: flex;
+    flex-direction: column;
+}
+
+.popular-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+}
+
+.popular-image {
+    height: 220px;
+    position: relative;
+    overflow: hidden;
+}
+
+.popular-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.popular-card:hover .popular-image img {
+    transform: scale(1.05);
+}
+
+.rating-badge {
+    position: absolute;
+    bottom: 12px;
+    left: 12px;
+    background: var(--white);
+    padding: 6px 12px;
+    border-radius: 100px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--primary);
+    box-shadow: var(--shadow-md);
+}
+
+.rating-badge i {
+    width: 14px;
+    height: 14px;
+    color: #FBBF24;
+    fill: #FBBF24;
+}
+
+.popular-content {
+    padding: 24px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.popular-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 12px;
+}
+
+.popular-content p {
+    font-size: 0.95rem;
+    margin-bottom: 24px;
+    line-height: 1.5;
+}
+
+.popular-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0;
+    margin-top: auto;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    margin-bottom: 20px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.meta-item i {
+    width: 16px;
+    height: 16px;
+}
+
+.meta-item.price {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0;
+}
+
+.meta-item.price span {
+    font-size: 0.75rem;
+    font-weight: 500;
+}
+
+.meta-item.price strong {
+    font-size: 1.2rem;
+    color: var(--primary);
+    font-weight: 800;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+@media (max-width: 1024px) {
+    .popular-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .popular-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .popular-image {
+        height: 200px;
+    }
+}

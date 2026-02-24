@@ -1,0 +1,176 @@
+/* --- Trust & Benefits Section Premium Styles --- */
+.trust-section {
+    padding: var(--section-padding);
+    background: #fdfdfd;
+    position: relative;
+    overflow: hidden;
+}
+
+.trust-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 10% 10%, rgba(15, 76, 63, 0.02) 0%, transparent 40%),
+        radial-gradient(circle at 90% 90%, rgba(15, 76, 63, 0.02) 0%, transparent 40%);
+    pointer-events: none;
+}
+
+.trust-header {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.trust-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.trust-header p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.trust-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+}
+
+/* Premium Trust Cards */
+.trust-card {
+    background: var(--white);
+    border-radius: 24px;
+    padding: 35px;
+    box-shadow: 0 10px 40px -10px rgba(0, 0, 0, 0.04);
+    border: 1px solid rgba(0, 0, 0, 0.03);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: relative;
+    z-index: 1;
+}
+
+.trust-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 25px 50px -15px rgba(15, 76, 63, 0.12);
+    border-color: rgba(15, 76, 63, 0.1);
+}
+
+.trust-icon-box {
+    width: 60px;
+    height: 60px;
+    background: rgba(15, 76, 63, 0.05);
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.trust-card:hover .trust-icon-box {
+    background: var(--primary);
+    transform: scale(1.1) rotate(5deg);
+}
+
+.trust-icon-box i {
+    width: 28px;
+    height: 28px;
+    color: var(--primary);
+    transition: color 0.3s ease;
+}
+
+.trust-card:hover .trust-icon-box i {
+    color: var(--white);
+}
+
+.trust-card h3 {
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.trust-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* Trust Reassurance Strip */
+.trust-reassurance-strip {
+    background: #f8faf9;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border: 1px dashed rgba(15, 76, 63, 0.2);
+}
+
+.reassurance-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--primary);
+    opacity: 0.8;
+}
+
+.reassurance-item i {
+    width: 18px;
+    height: 18px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.trust-card {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .trust-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .trust-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .trust-header h2 {
+        font-size: 2rem;
+    }
+
+    .trust-reassurance-strip {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px;
+    }
+}

@@ -1,0 +1,260 @@
+/* --- Profile Dashboard Styles --- */
+
+.profile-page {
+    padding-top: 100px;
+    background: #F8FAFA;
+}
+
+.profile-container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+/* 1. ProfileSummary Card */
+.profile-card {
+    background: var(--white);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.profile-info {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+.profile-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+.profile-details h1 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 4px;
+}
+
+.profile-details p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin: 2px 0;
+}
+
+/* Section Common Styling */
+.dashboard-section {
+    margin-bottom: 40px;
+}
+
+.dashboard-section h2 {
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin-bottom: 20px;
+    padding-left: 4px;
+}
+
+.grid-layout {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* 2. Saved Addresses */
+.address-card-v2 {
+    background: var(--white);
+    padding: 24px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    position: relative;
+    border: 1px solid transparent;
+    transition: var(--transition);
+}
+
+.address-card-v2:hover {
+    border-color: var(--primary);
+}
+
+.address-type {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 600;
+    font-size: 0.85rem;
+    margin-bottom: 12px;
+    color: var(--primary);
+}
+
+.address-val {
+    font-size: 0.95rem;
+    color: var(--text-main);
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.address-actions {
+    display: flex;
+    gap: 16px;
+    border-top: 1px solid #F3F4F6;
+    padding-top: 16px;
+}
+
+.action-link {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    text-decoration: none;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.action-link:hover {
+    color: var(--primary);
+}
+
+.action-link.delete:hover {
+    color: #EF4444;
+}
+
+/* 3. Quick Options */
+.options-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.option-item {
+    background: var(--white);
+    padding: 20px 24px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: var(--text-main);
+    transition: var(--transition);
+}
+
+.option-item:hover {
+    transform: translateX(4px);
+    box-shadow: var(--shadow-md);
+    color: var(--primary);
+}
+
+.option-content {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.option-content i {
+    color: var(--primary);
+}
+
+/* 4. Payment Methods */
+.payment-card {
+    background: var(--white);
+    padding: 20px 24px;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+
+.payment-info {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.payment-brand {
+    width: 48px;
+    height: 32px;
+    background: #F3F4F6;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 800;
+    font-style: italic;
+    color: #1E40AF;
+}
+
+/* 5. Account Actions */
+.account-actions-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+}
+
+.action-row {
+    padding: 16px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    text-decoration: none;
+    color: var(--text-main);
+    border-bottom: 1px solid #F3F4F6;
+    transition: var(--transition);
+}
+
+.action-row:last-child {
+    border-bottom: none;
+}
+
+.action-row:hover {
+    background: #F9FAFB;
+}
+
+.action-row i {
+    width: 20px;
+    color: var(--text-muted);
+}
+
+.action-row.logout {
+    color: #EF4444;
+}
+
+.action-row.logout i {
+    color: #EF4444;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+
+    .grid-layout,
+    .options-list {
+        grid-template-columns: 1fr;
+    }
+
+    .profile-card {
+        flex-direction: column;
+        gap: 24px;
+        text-align: center;
+    }
+
+    .profile-info {
+        flex-direction: column;
+    }
+
+    .profile-container {
+        padding: 0 20px 80px;
+    }
+}

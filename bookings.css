@@ -1,0 +1,235 @@
+/* --- My Bookings Page Styles --- */
+
+.bookings-page {
+    padding-top: 100px;
+    background: #F8FAFA;
+}
+
+.bookings-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+}
+
+.bookings-header {
+    margin-bottom: 32px;
+}
+
+.bookings-header h1 {
+    font-size: 1.75rem;
+    color: var(--primary);
+    margin-bottom: 8px;
+}
+
+.bookings-header p {
+    color: var(--text-muted);
+}
+
+/* Tabs / Sections */
+.booking-section {
+    margin-bottom: 48px;
+}
+
+.booking-section h2 {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.booking-section h2::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: #E5E7EB;
+}
+
+/* Booking Card */
+.booking-card {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    padding: 24px;
+    margin-bottom: 20px;
+    border: 1px solid rgba(15, 76, 63, 0.03);
+    transition: var(--transition);
+}
+
+.booking-card:hover {
+    box-shadow: var(--shadow-md);
+    transform: translateY(-2px);
+}
+
+.booking-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+.service-info-main {
+    display: flex;
+    gap: 20px;
+}
+
+.service-thumb {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
+}
+
+.service-title-area h3 {
+    font-size: 1.1rem;
+    margin-bottom: 4px;
+}
+
+/* Status Badges */
+.status-badge {
+    padding: 6px 12px;
+    border-radius: 100px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.status-badge.scheduled {
+    background: #FEF3C7;
+    color: #92400E;
+}
+
+.status-badge.ongoing {
+    background: #DBEAFE;
+    color: #1E40AF;
+}
+
+.status-badge.completed {
+    background: #D1FAE5;
+    color: #065F46;
+}
+
+.status-badge.cancelled {
+    background: #FEE2E2;
+    color: #991B1B;
+}
+
+/* Booking Details Grid */
+.booking-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+    padding: 16px;
+    background: #F9FAFB;
+    border-radius: var(--radius-sm);
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.9rem;
+    color: var(--text-main);
+}
+
+.detail-item i {
+    color: var(--text-muted);
+    width: 16px;
+    height: 16px;
+}
+
+/* Professional Info (Ongoing only) */
+.pro-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px;
+    background: #EFF6FF;
+    border-radius: var(--radius-sm);
+    margin-bottom: 24px;
+}
+
+.pro-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.75rem;
+    font-weight: 700;
+}
+
+.pro-text p {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.pro-text span {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+/* Action Buttons */
+.booking-actions {
+    display: flex;
+    gap: 12px;
+    border-top: 1px solid #F3F4F6;
+    padding-top: 20px;
+}
+
+.btn-sm {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+}
+
+/* Empty State */
+.empty-state {
+    text-align: center;
+    padding: 80px 40px;
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.empty-icon {
+    width: 64px;
+    height: 64px;
+    margin: 0 auto 24px;
+    color: #E5E7EB;
+}
+
+.empty-state h2 {
+    margin-bottom: 12px;
+}
+
+.empty-state p {
+    color: var(--text-muted);
+    margin-bottom: 32px;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 640px) {
+    .booking-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-actions {
+        flex-direction: column;
+    }
+
+    .btn-sm {
+        width: 100%;
+    }
+
+    .bookings-container {
+        padding: 0 20px 80px;
+    }
+}

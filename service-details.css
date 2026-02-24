@@ -1,0 +1,278 @@
+/* --- Service Details Page Styles --- */
+
+.service-details-page {
+    padding-top: 80px;
+    /* Offset for sticky navbar */
+    background: var(--background);
+}
+
+/* 1. Service Hero/Banner */
+.service-banner {
+    position: relative;
+    height: 400px;
+    overflow: hidden;
+}
+
+.service-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-banner::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 150px;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.4));
+}
+
+.service-banner .container {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    color: var(--white);
+}
+
+/* 2. Main Layout */
+.details-layout {
+    display: grid;
+    grid-template-columns: 1fr 380px;
+    gap: 40px;
+    padding: 60px 0;
+}
+
+.details-content {
+    display: flex;
+    flex-direction: column;
+    gap: 48px;
+}
+
+/* Sections Styling */
+.section-card {
+    background: var(--white);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.section-card h2 {
+    font-size: 1.5rem;
+    color: var(--primary);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* 2. Overview */
+.overview h1 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 16px;
+}
+
+.overview p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* 3. Included Tasks */
+.checklist-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+}
+
+.check-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 1rem;
+    color: var(--text-main);
+}
+
+.check-item i {
+    color: var(--accent-teal);
+    width: 20px;
+    height: 20px;
+}
+
+/* 4. Duration & Details Info */
+.info-row {
+    display: flex;
+    gap: 32px;
+    margin-top: 24px;
+}
+
+.info-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.info-item i {
+    color: var(--primary);
+}
+
+.info-item p {
+    font-weight: 600;
+    color: var(--primary);
+    margin: 0;
+}
+
+.info-item span {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* 5. Sticky Booking Sidebar */
+.booking-sidebar {
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+}
+
+.sidebar-card {
+    background: var(--white);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-lg);
+    border: 1px solid rgba(15, 76, 63, 0.05);
+}
+
+.price-display {
+    margin-bottom: 24px;
+}
+
+.price-display .label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    display: block;
+}
+
+.price-display .amount {
+    font-size: 2.5rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+/* Add-ons */
+.add-ons {
+    margin: 24px 0;
+    padding: 20px 0;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.add-ons h4 {
+    font-size: 1rem;
+    margin-bottom: 16px;
+}
+
+.add-on-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.add-on-label {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.95rem;
+}
+
+/* 6. Review Preview */
+.details-reviews {
+    margin-top: 12px;
+}
+
+.review-summary {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.review-summary span {
+    font-weight: 700;
+    color: var(--primary);
+}
+
+.review-snippet {
+    background: var(--background);
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+/* 7. Footer Booking (Mobile) */
+.mobile-book-btn {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: var(--white);
+    padding: 16px 24px;
+    box-shadow: 0 -10px 20px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-book-btn .price-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-book-btn .price-info span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.mobile-book-btn .price-info strong {
+    font-size: 1.25rem;
+    color: var(--primary);
+}
+
+/* --- Responsiveness --- */
+@media (max-width: 1024px) {
+    .details-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .booking-sidebar {
+        display: none;
+        /* Hide sidebar on mobile/tablet */
+    }
+
+    .mobile-book-btn {
+        display: flex;
+    }
+
+    .service-details-page {
+        padding-bottom: 100px;
+    }
+}
+
+@media (max-width: 640px) {
+    .service-banner {
+        height: 250px;
+    }
+
+    .checklist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .overview h1 {
+        font-size: 1.8rem;
+    }
+}

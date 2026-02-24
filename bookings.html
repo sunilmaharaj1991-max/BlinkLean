@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Bookings | BlinkLean</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bookings.css">
+</head>
+
+<body class="bookings-page">
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Blink<span>Lean</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html#services">Services</a>
+                <a href="profile.html">My Account</a>
+                <a href="booking.html" class="btn btn-primary">Sell Scrap</a>
+            </div>
+            <button class="mobile-menu-btn" id="menuBtn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container bookings-container">
+        <header class="bookings-header">
+            <h1>My Bookings</h1>
+            <p>Track your ongoing services and manage upcoming appointments.</p>
+        </header>
+
+        <!-- 2. Ongoing / In Progress -->
+        <section class="booking-section">
+            <h2>Ongoing Services</h2>
+            <div class="booking-card">
+                <div class="booking-card-header">
+                    <div class="service-info-main">
+                        <img src="https://images.unsplash.com/photo-1518301191419-db37604f855d?auto=format&fit=crop&q=80&w=200"
+                            alt="Ongoing service" class="service-thumb">
+                        <div class="service-title-area">
+                            <h3>Kitchen Deep Cleaning</h3>
+                            <div class="status-badge ongoing">In Progress</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="pro-info">
+                    <div class="pro-avatar">AK</div>
+                    <div class="pro-text">
+                        <p>Anil Kumar is on the job</p>
+                        <span>Est. completion by 02:30 PM</span>
+                    </div>
+                </div>
+                <div class="booking-actions">
+                    <button class="btn btn-secondary btn-sm"><i data-lucide="message-square"
+                            style="width:14px; height:14px; margin-right:8px;"></i> Contact Support</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 1. Upcoming Bookings -->
+        <section class="booking-section">
+            <h2>Upcoming Appointments</h2>
+            <div class="booking-card">
+                <div class="booking-card-header">
+                    <div class="service-info-main">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=200"
+                            alt="Upcoming service" class="service-thumb">
+                        <div class="service-title-area">
+                            <h3>Bathroom Deep Cleaning</h3>
+                            <div class="status-badge scheduled">Scheduled</div>
+                        </div>
+                    </div>
+                    <div class="booking-price">₹499</div>
+                </div>
+                <div class="booking-details-grid">
+                    <div class="detail-item">
+                        <i data-lucide="calendar"></i>
+                        <span>25 Feb, 10:00 AM</span>
+                    </div>
+                    <div class="detail-item">
+                        <i data-lucide="map-pin"></i>
+                        <span>Home Address</span>
+                    </div>
+                </div>
+                <div class="booking-actions">
+                    <button class="btn btn-secondary btn-sm">Reschedule</button>
+                    <button class="btn btn-secondary btn-sm" style="color:#EF4444;">Cancel Booking</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- 3. Completed Services -->
+        <section class="booking-section">
+            <h2>Completed Services</h2>
+            <div class="booking-card">
+                <div class="booking-card-header">
+                    <div class="service-info-main">
+                        <img src="https://images.unsplash.com/photo-1628177142898-93e36e4e3a30?auto=format&fit=crop&q=80&w=200"
+                            alt="Completed service" class="service-thumb">
+                        <div class="service-title-area">
+                            <h3>Full Car Wash</h3>
+                            <div class="status-badge completed">Completed</div>
+                        </div>
+                    </div>
+                    <div class="booking-price">₹1,299</div>
+                </div>
+                <div class="booking-details-grid">
+                    <div class="detail-item">
+                        <i data-lucide="calendar"></i>
+                        <span>15 Feb, 04:00 PM</span>
+                    </div>
+                    <div class="detail-item">
+                        <i data-lucide="check-circle-2"></i>
+                        <span>Service Satisfactory</span>
+                    </div>
+                </div>
+                <div class="booking-actions">
+                    <button class="btn btn-primary btn-sm">Rebook Service</button>
+                    <button class="btn btn-secondary btn-sm">Rate & Review</button>
+                </div>
+            </div>
+
+            <!-- Cancelled Example -->
+            <div class="booking-card" style="opacity: 0.8;">
+                <div class="booking-card-header">
+                    <div class="service-info-main">
+                        <img src="https://images.unsplash.com/photo-1581578731548-64695cc6954?auto=format&fit=crop&q=80&w=200"
+                            alt="Cancelled service" class="service-thumb">
+                        <div class="service-title-area">
+                            <h3>Home Sanitation</h3>
+                            <div class="status-badge cancelled">Cancelled</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="booking-actions">
+                    <button class="btn btn-secondary btn-sm">View Details</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">Blink<span>Lean</span></a>
+                <p>© 2026 BlinkLean Services. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+
+</html>

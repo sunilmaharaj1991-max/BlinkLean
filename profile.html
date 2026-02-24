@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile | BlinkLean</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="profile.css">
+</head>
+
+<body class="profile-page">
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo">Blink<span>Lean</span></a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html#services">Services</a>
+                <a href="index.html#how-it-works">How it works</a>
+                <a href="booking.html" class="btn btn-secondary">Book a Service</a>
+            </div>
+            <button class="mobile-menu-btn" id="menuBtn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <main class="container profile-container">
+
+        <!-- 1. Profile Summary Card -->
+        <section class="profile-card">
+            <div class="profile-info">
+                <div class="profile-avatar">RS</div>
+                <div class="profile-details">
+                    <h1>Rohit Sharma</h1>
+                    <p><i data-lucide="phone" style="width:14px; height:14px; vertical-align:middle;"></i> +91 98765
+                        43210</p>
+                    <p><i data-lucide="mail" style="width:14px; height:14px; vertical-align:middle;"></i>
+                        rohit.sharma@example.com</p>
+                </div>
+            </div>
+            <button class="btn btn-secondary">Edit Profile</button>
+        </section>
+
+        <!-- 3. Quick Account Options -->
+        <section class="dashboard-section">
+            <h2>Activity & History</h2>
+            <div class="options-list">
+                <a href="bookings.html" class="option-item">
+                    <div class="option-content">
+                        <i data-lucide="package"></i>
+                        <span>My Bookings</span>
+                    </div>
+                    <i data-lucide="chevron-right"></i>
+                </a>
+
+                <a href="#" class="option-item">
+                    <div class="option-content">
+                        <i data-lucide="heart"></i>
+                        <span>Saved Services</span>
+                    </div>
+                    <i data-lucide="chevron-right"></i>
+                </a>
+                <a href="#" class="option-item">
+                    <div class="option-content">
+                        <i data-lucide="ticket"></i>
+                        <span>Offers & Coupons</span>
+                    </div>
+                    <i data-lucide="chevron-right"></i>
+                </a>
+                <a href="#" class="option-item">
+                    <div class="option-content">
+                        <i data-lucide="help-circle"></i>
+                        <span>Help & Support</span>
+                    </div>
+                    <i data-lucide="chevron-right"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- 2. Saved Addresses -->
+        <section class="dashboard-section">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2 style="margin:0;">Saved Addresses</h2>
+                <button class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.85rem;">+ Add New</button>
+            </div>
+            <div class="grid-layout">
+                <div class="address-card-v2">
+                    <div class="address-type"><i data-lucide="home"></i> HOME</div>
+                    <p class="address-val">Flat 402, Green Valley Apartments, Whitefield, Bengaluru - 560066</p>
+                    <div class="address-actions">
+                        <span class="action-link">Edit</span>
+                        <span class="action-link delete">Delete</span>
+                    </div>
+                </div>
+                <div class="address-card-v2">
+                    <div class="address-type"><i data-lucide="briefcase"></i> WORK</div>
+                    <p class="address-val">Tower B, Tech Park Central, Outer Ring Road, Bengaluru - 560103</p>
+                    <div class="address-actions">
+                        <span class="action-link">Edit</span>
+                        <span class="action-link delete">Delete</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. Payment Methods -->
+        <section class="dashboard-section">
+            <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                <h2 style="margin:0;">Payment Methods</h2>
+                <button class="btn btn-secondary" style="padding: 8px 16px; font-size: 0.85rem;">+ Add Method</button>
+            </div>
+            <div class="payment-card">
+                <div class="payment-info">
+                    <div class="payment-brand">UPI</div>
+                    <div>
+                        <p style="font-weight:600; font-size: 0.95rem;">rohit@oksbi</p>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">Primary Payment Method</p>
+                    </div>
+                </div>
+                <span class="action-link">Remove</span>
+            </div>
+            <div class="payment-card">
+                <div class="payment-info">
+                    <div class="payment-brand">VISA</div>
+                    <div>
+                        <p style="font-weight:600; font-size: 0.95rem;">**** **** **** 4242</p>
+                        <p style="font-size: 0.8rem; color: var(--text-muted);">Expires 12/28</p>
+                    </div>
+                </div>
+                <span class="action-link">Remove</span>
+            </div>
+        </section>
+
+        <!-- 5. Account Actions -->
+        <section class="dashboard-section">
+            <h2>Account Settings</h2>
+            <div class="account-actions-card">
+                <a href="#" class="action-row">
+                    <i data-lucide="lock"></i>
+                    <span>Change Password</span>
+                </a>
+                <a href="#" class="action-row">
+                    <i data-lucide="bell"></i>
+                    <span>Notification Settings</span>
+                </a>
+                <a href="#" class="action-row">
+                    <i data-lucide="shield"></i>
+                    <span>Privacy Policy</span>
+                </a>
+                <a href="index.html" class="action-row logout">
+                    <i data-lucide="log-out"></i>
+                    <span>Logout</span>
+                </a>
+            </div>
+            <p style="margin-top: 24px; text-align: center;">
+                <a href="#" style="color: #EF4444; font-size: 0.85rem; text-decoration: none;">Delete Account</a>
+            </p>
+        </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">Blink<span>Lean</span></a>
+                <p>Environmentally safe home services.</p>
+            </div>
+            <div class="footer-links">
+                <h4>Support</h4>
+                <a href="#">Help Center</a>
+                <a href="#">Contact Us</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+
+</body>
+
+
+</html>

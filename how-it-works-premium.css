@@ -1,0 +1,189 @@
+/* --- How It Works Premium Experience --- */
+.how-it-works-premium {
+    padding: var(--section-padding);
+    background: #fdfdfd;
+    position: relative;
+    overflow: hidden;
+}
+
+.how-it-works-premium .section-header {
+    text-align: center;
+    margin-bottom: 80px;
+}
+
+.how-it-works-premium .section-header h2 {
+    font-size: 2.5rem;
+    color: var(--primary);
+    margin-bottom: 12px;
+    font-weight: 800;
+}
+
+.how-it-works-premium .section-header p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.step-flow-container {
+    position: relative;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Connecting Line (Desktop) */
+.step-connecting-line {
+    position: absolute;
+    top: 60px;
+    left: 15%;
+    right: 15%;
+    height: 3px;
+    background: linear-gradient(to right, rgba(15, 76, 63, 0.05) 0%, var(--primary) 50%, rgba(15, 76, 63, 0.05) 100%);
+    opacity: 0.2;
+    z-index: 1;
+}
+
+.steps-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Premium Step Card */
+.premium-step-card {
+    background: var(--white);
+    padding: 40px 30px;
+    border-radius: 24px;
+    text-align: center;
+    transition: all 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 0 15px 45px -10px rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.02);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.premium-step-card:hover {
+    transform: translateY(-15px);
+    box-shadow: 0 35px 70px -15px rgba(15, 76, 63, 0.15);
+}
+
+/* Step Badge Indicator */
+.step-badge {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary) 0%, #059669 100%);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 30px;
+    box-shadow: 0 8px 20px rgba(15, 76, 63, 0.3);
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.premium-step-card:hover .step-badge {
+    transform: scale(1.1);
+    box-shadow: 0 12px 25px rgba(15, 76, 63, 0.4);
+}
+
+.step-icon-inner {
+    width: 100px;
+    height: 100px;
+    background: #f0fdf4;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    transition: all 0.3s ease;
+}
+
+.premium-step-card:hover .step-icon-inner {
+    background: var(--primary);
+    transform: rotate(5deg);
+}
+
+.step-icon-inner i {
+    width: 40px;
+    height: 40px;
+    color: var(--primary);
+    transition: all 0.3s ease;
+}
+
+.premium-step-card:hover .step-icon-inner i {
+    color: var(--white);
+}
+
+.premium-step-card h3 {
+    font-size: 1.4rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.premium-step-card p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* Trust Micro-Badges */
+.step-trust-footer {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.trust-micro-badge {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 0.85rem;
+    color: var(--primary);
+    font-weight: 700;
+    background: rgba(15, 76, 63, 0.04);
+    padding: 8px 16px;
+    border-radius: 100px;
+    transition: all 0.3s ease;
+}
+
+.trust-micro-badge:hover {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+}
+
+.trust-micro-badge i {
+    width: 16px;
+    height: 16px;
+}
+
+/* Responsiveness */
+@media (max-width: 991px) {
+    .step-connecting-line {
+        display: none;
+    }
+
+    .steps-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 767px) {
+    .steps-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .premium-step-card {
+        padding: 40px 20px;
+    }
+}

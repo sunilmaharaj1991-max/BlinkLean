@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Partner With Us | BlinKlean</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .partner-hero {
+            padding: 120px 0 80px;
+            background: linear-gradient(rgba(15, 76, 63, 0.9), rgba(15, 76, 63, 0.9)), url('https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=1200');
+            background-size: cover;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .partner-benefits {
+            padding: 80px 0;
+        }
+
+        .benefit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .partner-form-section {
+            padding: 80px 0;
+            background: #f4f7f6;
+        }
+
+        .partner-form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: var(--white);
+            padding: 40px;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-md);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .form-group input,
+        .form-group select,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: var(--radius-sm);
+        }
+
+        .partnership-categories {
+            padding: 60px 0;
+            background: #fff;
+        }
+
+        .category-card-p {
+            border: 1px solid #eee;
+            padding: 25px;
+            border-radius: var(--radius-md);
+            transition: var(--transition);
+        }
+
+        .category-card-p:hover {
+            border-color: var(--primary);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .category-card-p h3 {
+            margin: 15px 0 10px;
+            color: var(--primary);
+        }
+
+        .btn-full {
+            width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <div class="logo-text">Blin<span>Klean</span></div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="services.html#home-cleaning">Home Cleaning</a>
+                <a href="services.html#vehicle-cleaning">Vehicle Cleaning</a>
+                <a href="services.html#laundry">Laundry</a>
+                <a href="services.html#recycling">Scrap & Recycling</a>
+                <a href="partner.html" class="active">Partner With Us</a>
+                <a href="booking.html" class="btn btn-primary">Book Now</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="partner-hero">
+        <div class="container">
+            <h1>Partner with BlinKlean AI Clean-Tech</h1>
+            <p>Join India's multi-service platform for Home Cleaning, Vehicle Care, Laundry & Recycling.</p>
+        </div>
+    </header>
+
+    <section class="partner-benefits">
+        <div class="container">
+            <h2 style="text-align: center;">Why Partner With Us?</h2>
+            <div class="benefit-grid">
+                <div class="card" style="text-align: center; padding: 30px;">
+                    <i data-lucide="trending-up"
+                        style="color: var(--primary); margin-bottom: 15px; width: 40px; height: 40px;"></i>
+                    <h3>Verified Leads</h3>
+                    <p>Access high-intent customers in your vicinity with AI-driven booking assignments.</p>
+                </div>
+                <div class="card" style="text-align: center; padding: 30px;">
+                    <i data-lucide="wallet"
+                        style="color: var(--primary); margin-bottom: 15px; width: 40px; height: 40px;"></i>
+                    <h3>Secure Earnings</h3>
+                    <p>Transparent weekly payment cycles and performance-based incentives.</p>
+                </div>
+                <div class="card" style="text-align: center; padding: 30px;">
+                    <i data-lucide="award"
+                        style="color: var(--primary); margin-bottom: 15px; width: 40px; height: 40px;"></i>
+                    <h3>Premium Branding</h3>
+                    <p>Deliver services under a known clean-tech brand with top-tier training and gear.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partnership-categories">
+        <div class="container">
+            <h2 style="text-align: center; margin-bottom: 40px;">Partnership Opportunities</h2>
+            <div class="benefit-grid">
+                <div class="category-card-p">
+                    <i data-lucide="home"></i>
+                    <h3>Home Cleaning</h3>
+                    <p>For 1BHK-3BHK specialists and deep cleaning experts.</p>
+                </div>
+                <div class="category-card-p">
+                    <i data-lucide="car"></i>
+                    <h3>Vehicle Care</h3>
+                    <p>Mobile car wash and detailing professionals.</p>
+                </div>
+                <div class="category-card-p">
+                    <i data-lucide="shirt"></i>
+                    <h3>Laundry Partners</h3>
+                    <p>For established laundry centers and dry cleaners.</p>
+                </div>
+                <div class="category-card-p">
+                    <i data-lucide="recycle"></i>
+                    <h3>Scrap & Recycling</h3>
+                    <p>Authorized collection agents and recycling yards.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="partner-form-section">
+        <div class="container">
+            <div class="partner-form">
+                <h2 style="text-align: center; margin-bottom: 30px;">Professional Enrollment Form</h2>
+                <form>
+                    <div class="form-group">
+                        <label>Full Name</label>
+                        <input type="text" placeholder="Enter your full name">
+                    </div>
+                    <div class="form-group">
+                        <label>Phone Number</label>
+                        <input type="tel" placeholder="Mobile number for OTP verification">
+                    </div>
+                    <div class="form-group">
+                        <label>Partnership Interest</label>
+                        <select>
+                            <option>Home Cleaning Expert</option>
+                            <option>Vehicle Detailer</option>
+                            <option>Laundry Service Center</option>
+                            <option>Scrap Collection Agent</option>
+                            <option>Office Cleaning Contractor</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label>Location (City/Pincode)</label>
+                        <input type="text" placeholder="Where do you operate?">
+                    </div>
+                    <div class="form-group">
+                        <label>Experience (Years)</label>
+                        <input type="number" placeholder="Years of experience">
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full">Join the Ecosystem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container" style="text-align: center;">
+            <p>&copy; 2026 BlinKlean Partner Ecosystem.</p>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

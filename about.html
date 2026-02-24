@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us | BlinKlean</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .about-hero {
+            padding: 120px 0 80px;
+            background: var(--primary);
+            color: var(--white);
+            text-align: center;
+        }
+
+        .about-section {
+            padding: 80px 0;
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: var(--radius-lg);
+            box-shadow: var(--shadow-lg);
+        }
+
+        .mission-vison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .mv-card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--radius-md);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .mv-card i {
+            color: var(--primary);
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <svg width="40" height="40" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="50" cy="50" r="50" fill="#0088CC" />
+                    <path d="M50 10L55 40L85 45L55 50L50 80L45 50L15 45L45 40L50 10Z" fill="white" />
+                    <path d="M10 60C10 60 30 50 50 60C70 70 90 60 90 60V90C90 90 70 100 50 90C30 80 10 90 10 90V60Z"
+                        fill="#228833" />
+                </svg>
+                <div class="logo-text">Blin<span>Klean</span></div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="services.html#home-cleaning">Home Cleaning</a>
+                <a href="services.html#vehicle-cleaning">Vehicle Cleaning</a>
+                <a href="services.html#laundry">Laundry</a>
+                <a href="services.html#recycling">Scrap & Recycling</a>
+                <a href="partner.html">Partner With Us</a>
+                <a href="booking.html" class="btn btn-primary">Sell Scrap</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="about-hero">
+        <div class="container">
+            <h1>Our Story</h1>
+            <p>Smart Cleaning & Recycling for a Greener Tomorrow</p>
+        </div>
+    </header>
+
+    <section class="about-section">
+        <div class="container about-grid">
+            <div class="about-content">
+                <h2>Making Home Services Simple, Safe, and Sustainable.</h2>
+                <p>Founded with a vision to revolutionize the home service industry, BlinKlean combines professional
+                    expertise with eco-friendly practices. We believe that a clean home shouldn't come at the cost of
+                    the environment.</p>
+                <p>Our team of verified professionals is dedicated to providing top-notch cleaning and maintenance
+                    services while ensuring minimal environmental impact through our smart recycling initiatives.</p>
+
+                <div class="mission-vison">
+                    <div class="mv-card">
+                        <i data-lucide="target"></i>
+                        <h3>Our Mission</h3>
+                        <p>To provide high-quality home services that are accessible, reliable, and environmentally
+                            responsible.</p>
+                    </div>
+                    <div class="mv-card">
+                        <i data-lucide="eye"></i>
+                        <h3>Our Vision</h3>
+                        <p>To become the leading platform for sustainable home care, driving a global shift towards
+                            greener living.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="about-image">
+                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&q=80&w=800"
+                    alt="About BlinKlean">
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container" style="text-align: center;">
+            <p>&copy; 2026 BlinKlean. AI Powered Clean-Tech Platform</p>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>

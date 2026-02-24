@@ -1,0 +1,119 @@
+/* --- How It Works Section --- */
+.how-it-works {
+    padding: var(--section-padding);
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+    position: relative;
+    margin-top: 60px;
+}
+
+/* Connecting Line for Desktop */
+.process-steps::before {
+    content: '';
+    position: absolute;
+    top: 60px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: dashed rgba(15, 76, 63, 0.1);
+    z-index: 1;
+}
+
+.step-card {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.step-icon-wrapper {
+    width: 120px;
+    height: 120px;
+    background: var(--white);
+    border: 2px solid rgba(15, 76, 63, 0.05);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 32px;
+    position: relative;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.step-card:hover .step-icon-wrapper {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--accent-teal);
+}
+
+.step-number {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 36px;
+    height: 36px;
+    background: var(--primary);
+    color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 1.1rem;
+    border: 4px solid var(--white);
+}
+
+.step-icon-wrapper i {
+    width: 48px;
+    height: 48px;
+    color: var(--primary);
+}
+
+.step-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 16px;
+    color: var(--primary);
+}
+
+.step-card p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    max-width: 280px;
+}
+
+/* Responsiveness */
+@media (max-width: 968px) {
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: 80px;
+    }
+
+    .process-steps::before {
+        display: none;
+    }
+
+    /* Vertical connecting line for mobile could be added here if desired */
+}
+
+@media (max-width: 640px) {
+    .step-icon-wrapper {
+        width: 100px;
+        height: 100px;
+    }
+
+    .step-icon-wrapper i {
+        width: 40px;
+        height: 40px;
+    }
+}

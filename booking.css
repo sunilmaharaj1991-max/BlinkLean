@@ -1,0 +1,293 @@
+/* --- Booking Interface Styles --- */
+
+.booking-page {
+    padding-top: 100px;
+    background: #F8FAFA;
+}
+
+.booking-layout {
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 40px;
+    padding-bottom: 80px;
+}
+
+/* Section Header styling */
+.booking-section {
+    background: var(--white);
+    padding: 32px;
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 24px;
+    border: 1px solid rgba(15, 76, 63, 0.03);
+}
+
+.booking-section h2 {
+    font-size: 1.25rem;
+    color: var(--primary);
+    margin-bottom: 24px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.booking-section h2 span {
+    background: var(--primary);
+    color: var(--white);
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.9rem;
+}
+
+/* 1. Service Summary */
+.mini-service-card {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.mini-thumb {
+    width: 80px;
+    height: 80px;
+    border-radius: var(--radius-sm);
+    object-fit: cover;
+}
+
+.mini-details h3 {
+    margin-bottom: 4px;
+    font-size: 1.1rem;
+}
+
+.mini-meta {
+    display: flex;
+    gap: 16px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* 2. Date & Time Selection */
+.date-selector {
+    display: flex;
+    gap: 12px;
+    overflow-x: auto;
+    padding-bottom: 12px;
+    scrollbar-width: none;
+}
+
+.date-card {
+    min-width: 80px;
+    padding: 16px;
+    border-radius: var(--radius-sm);
+    border: 1px solid #E5E7EB;
+    text-align: center;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.date-card.active {
+    background: var(--primary);
+    color: var(--white);
+    border-color: var(--primary);
+}
+
+.time-slots {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.time-slot {
+    padding: 12px;
+    border-radius: var(--radius-sm);
+    border: 1px solid #E5E7EB;
+    text-align: center;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: var(--transition);
+}
+
+.time-slot.active {
+    background: rgba(45, 212, 191, 0.1);
+    border-color: var(--accent-teal);
+    color: var(--primary);
+    font-weight: 600;
+}
+
+.time-slot.disabled {
+    background: #F3F4F6;
+    color: #9CA3AF;
+    cursor: not-allowed;
+    border-color: transparent;
+}
+
+/* 3. Address Selection */
+.address-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.address-card {
+    padding: 20px;
+    border-radius: var(--radius-sm);
+    border: 1px solid #E5E7EB;
+    cursor: pointer;
+    position: relative;
+    transition: var(--transition);
+}
+
+.address-card.active {
+    border-color: var(--primary);
+    background: rgba(15, 76, 63, 0.02);
+}
+
+.address-label {
+    display: inline-block;
+    padding: 4px 8px;
+    background: #F3F4F6;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+.address-text {
+    font-size: 0.95rem;
+    color: var(--text-main);
+}
+
+.btn-add-address {
+    color: var(--primary);
+    font-weight: 600;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    margin-top: 12px;
+}
+
+/* 4. Pricing Sidebar */
+.checkout-sidebar {
+    position: sticky;
+    top: 120px;
+    height: fit-content;
+}
+
+.coupon-box {
+    display: flex;
+    gap: 8px;
+    margin-bottom: 24px;
+}
+
+.coupon-box input {
+    flex: 1;
+    padding: 12px;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--radius-sm);
+}
+
+.price-summary {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 24px;
+}
+
+.price-summary li {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    color: var(--text-muted);
+}
+
+.price-summary li.total {
+    border-top: 1px solid #E5E7EB;
+    padding-top: 16px;
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--primary);
+}
+
+.price-summary li.discount {
+    color: #10B981;
+}
+
+/* 5. Payment Methods */
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    border: 1px solid #E5E7EB;
+    border-radius: var(--radius-sm);
+    cursor: pointer;
+}
+
+.payment-option input {
+    width: 20px;
+    height: 20px;
+    accent-color: var(--primary);
+}
+
+.payment-option i {
+    width: 24px;
+    height: 24px;
+    color: var(--text-muted);
+}
+
+/* Trust Indicators */
+.trust-footer {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 24px;
+}
+
+.trust-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.trust-item i {
+    width: 16px;
+    height: 16px;
+    color: #10B981;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 1024px) {
+    .booking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .checkout-sidebar {
+        position: static;
+        order: 2;
+    }
+}
+
+@media (max-width: 640px) {
+    .booking-section {
+        padding: 24px;
+    }
+
+    .time-slots {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

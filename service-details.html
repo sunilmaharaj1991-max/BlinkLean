@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bathroom Deep Cleaning | BlinkLean</title>
+    <!-- Montserrat and Outfit fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="service-details.css">
+</head>
+
+<body class="service-details-page">
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <div class="logo-text">Blin<span>Klean</span></div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="services.html">Services</a>
+                <a href="pricing.html">Pricing</a>
+                <a href="about.html">About</a>
+                <a href="partner.html">Partner</a>
+                <a href="contact.html">Contact Us</a>
+                <a href="booking.html" class="btn btn-primary">Book Now</a>
+            </div>
+            <button class="mobile-menu-btn" id="menuBtn">
+                <i data-lucide="menu"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- 1. Service Image Banner -->
+    <header class="service-banner">
+        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1200"
+            alt="Bathroom Deep Cleaning">
+        <div class="container">
+            <!-- Title can be added here if needed, but per prompt it's in a separate section -->
+        </div>
+    </header>
+
+    <main class="container details-layout">
+        <div class="details-content">
+            <!-- 2. Service Title & Overview -->
+            <section class="overview">
+                <h1>Bathroom Deep Cleaning</h1>
+                <p>A thorough deep cleaning service that removes stains, bacteria, and buildup to leave your bathroom
+                    fresh, hygienic, and sparkling clean. We use specialized equipment and eco-friendly agents to
+                    restore your bathroom's original shine.</p>
+
+                <!-- 4. Duration & Service Details -->
+                <div class="info-row">
+                    <div class="info-item">
+                        <i data-lucide="clock"></i>
+                        <div>
+                            <p>1 - 1.5 Hours</p>
+                            <span>Estimated Time</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i data-lucide="users"></i>
+                        <div>
+                            <p>1 Professional</p>
+                            <span>Staff Required</span>
+                        </div>
+                    </div>
+                    <div class="info-item">
+                        <i data-lucide="briefcase"></i>
+                        <div>
+                            <p>All Tools Included</p>
+                            <span>No extra cost</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 3. Included Tasks Checklist -->
+            <section class="section-card">
+                <h2><i data-lucide="check-square"></i> What's Included?</h2>
+                <div class="checklist-grid">
+                    <div class="check-item"><i data-lucide="check-circle-2"></i> Tile & floor scrubbing</div>
+                    <div class="check-item"><i data-lucide="check-circle-2"></i> Hard water stain removal</div>
+                    <div class="check-item"><i data-lucide="check-circle-2"></i> Sink & mirror cleaning</div>
+                    <div class="check-item"><i data-lucide="check-circle-2"></i> Toilet sanitization</div>
+                    <div class="check-item"><i data-lucide="check-circle-2"></i> Disinfecting high-touch areas</div>
+                    <div class="check-item"><i data-lucide="check-circle-2"></i> Exhaust fan & light cleaning</div>
+                    <div class="check-item"><i data-lucide="check-circle-2"></i> Cobweb removal</div>
+                    <div class="check-item"><i data-lucide="check-circle-2"></i> Tap & shower head polishing</div>
+                </div>
+            </section>
+
+            <!-- 6. Customer Reviews Preview -->
+            <section class="section-card">
+                <h2><i data-lucide="star"></i> Customer Feedback</h2>
+                <div class="details-reviews">
+                    <div class="review-summary">
+                        <div class="rating-stars" style="color: #FBBF24;">
+                            <i data-lucide="star" style="fill: currentColor;"></i>
+                            <i data-lucide="star" style="fill: currentColor;"></i>
+                            <i data-lucide="star" style="fill: currentColor;"></i>
+                            <i data-lucide="star" style="fill: currentColor;"></i>
+                            <i data-lucide="star" style="fill: currentColor;"></i>
+                        </div>
+                        <span>4.8 (850 reviews)</span>
+                    </div>
+                    <div class="review-snippet">
+                        “Excellent service and very professional team. My bathroom looks brand new again. The staff was
+                        polite and finished the job exactly on time.”
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- 5. Pricing & Booking Sidebar (Desktop) -->
+        <aside class="booking-sidebar">
+            <div class="sidebar-card">
+                <div class="price-display">
+                    <span class="label">Starting from</span>
+                    <span class="amount">₹499</span>
+                </div>
+
+                <div class="add-ons">
+                    <h4>Available Add-ons</h4>
+                    <div class="add-on-item">
+                        <div class="add-on-label">
+                            <input type="checkbox" id="stain">
+                            <label for="stain">Hard stain treatment</label>
+                        </div>
+                        <span>+₹99</span>
+                    </div>
+                    <div class="add-on-item">
+                        <div class="add-on-label">
+                            <input type="checkbox" id="bacteria">
+                            <label for="bacteria">Anti-bacterial coating</label>
+                        </div>
+                        <span>+₹149</span>
+                    </div>
+                </div>
+
+                <button onclick="location.href='booking.html'" class="btn btn-primary btn-full btn-lg">Book Service
+                    Now</button>
+                <p style="text-align: center; font-size: 0.8rem; color: var(--text-muted); margin-top: 16px;">
+                    <i data-lucide="shield"></i> 100% Satisfaction Guarantee
+                </p>
+            </div>
+        </aside>
+    </main>
+
+    <!-- 7. Sticky Book Now Button (Mobile) -->
+    <div class="mobile-book-btn">
+        <div class="price-info">
+            <span>Starting at</span>
+            <strong>₹499</strong>
+        </div>
+        <button onclick="location.href='booking.html'" class="btn btn-primary btn-lg">Book Now</button>
+    </div>
+
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div class="footer-brand">
+                <a href="index.html" class="logo">Blink<span>Lean</span></a>
+                <p>Making home services simple, safe, and sustainable.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/p/DU7uAgDE5U5/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=="
+                        target="_blank"><i data-lucide="instagram"></i></a>
+                    <a href="https://www.linkedin.com/posts/malnad-manju-cafe_blinklean-startupindia-cleantech-activity-7429870434927448064-WCmG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFcir08BrzVapR6lEqBitqVDVd4Q2ypNtvI"
+                        target="_blank"><i data-lucide="linkedin"></i></a>
+                    <a href="#"><i data-lucide="facebook"></i></a>
+                </div>
+            </div>
+            <div class="footer-links">
+                <h4>Services</h4>
+                <a href="#">Home Cleaning</a>
+                <a href="#">Car Washing</a>
+                <a href="#">Grooming</a>
+            </div>
+            <div class="footer-links">
+                <h4>Company</h4>
+                <a href="#">About Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+
+        // Mobile menu toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+
+        menuBtn.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,83 @@
+version: '3.8'
+
+# This file is built to mirror an AWS ECS Production Stack seamlessly locally.
+services:
+  backend:
+    build:
+      context: ./blinklean-backend
+      dockerfile: Dockerfile
+    image: blinklean/backend:latest
+    container_name: blinklean_backend_prod
+    ports:
+      - "3000:3000"
+    environment:
+      - PORT=3000
+      - NODE_ENV=production
+      # Connecting internally utilizing isolated docker networking mimicking AWS VPC bridging.
+      - DATABASE_URL=postgresql://postgres:postgres@db_prod:5432/blinklean_prod
+      - REDIS_HOST=redis_prod
+      - REDIS_PORT=6379
+      - JWT_SECRET=${JWT_SECRET:-supersecretkey_prod}
+      - AI_SERVICE_URL=http://ai-service_prod:8000
+    depends_on:
+      db_prod:
+        condition: service_healthy
+      redis_prod:
+        condition: service_started
+      ai-service_prod:
+        condition: service_started
+    restart: always
+    networks:
+      - blinklean-prod-net
+
+  ai-service_prod:
+    build:
+      context: ./blinklean-ai
+      dockerfile: Dockerfile
+    image: blinklean/ai-service:latest
+    container_name: blinklean_ai_prod
+    ports:
+      - "8000:8000"
+    environment:
+      - ENVIRONMENT=production
+    restart: always
+    networks:
+      - blinklean-prod-net
+
+  db_prod:
+    image: postgres:15-alpine
+    container_name: blinklean_db_prod
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=blinklean_prod
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata_prod:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U postgres" ]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+    restart: always
+    networks:
+      - blinklean-prod-net
+
+  redis_prod:
+    image: redis:7-alpine
+    container_name: blinklean_redis_prod
+    ports:
+      - "6379:6379"
+    restart: always
+    networks:
+      - blinklean-prod-net
+
+volumes:
+  pgdata_prod:
+    name: blinklean_pgdata_prod
+
+networks:
+  blinklean-prod-net:
+    driver: bridge
+    name: blinklean_prod_network

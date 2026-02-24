@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlinkLean UI Design System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .ds-section {
+            padding: 60px 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        }
+
+        .ds-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .color-swatch {
+            border-radius: 12px;
+            padding: 20px;
+            color: white;
+            font-weight: 600;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            height: 120px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .color-code {
+            font-family: monospace;
+            font-size: 0.8rem;
+            font-weight: 400;
+        }
+
+        .component-label {
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .ds-container {
+            max-width: 900px;
+            margin: 100px auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="ds-container">
+        <header>
+            <h1>BlinkLean UI System</h1>
+            <p>Clean, Trustworthy, Premium. A design system for modern home services.</p>
+        </header>
+
+        <!-- Colors -->
+        <section class="ds-section">
+            <h2>🎨 Color Palette</h2>
+            <div class="ds-grid">
+                <div class="color-swatch" style="background: var(--primary);">
+                    Primary (Deep Green)
+                    <span class="color-code">#0F4C3F</span>
+                </div>
+                <div class="color-swatch" style="background: var(--accent); color: var(--primary);">
+                    Accent (Lime)
+                    <span class="color-code">#B4D536</span>
+                </div>
+                <div class="color-swatch" style="background: var(--accent-teal); color: var(--primary);">
+                    Accent (Teal)
+                    <span class="color-code">#2DD4BF</span>
+                </div>
+                <div class="color-swatch"
+                    style="background: var(--background); color: var(--text-main); border: 1px solid #eee;">
+                    Background
+                    <span class="color-code">#F8FAFA</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography -->
+        <section class="ds-section">
+            <h2>🔤 Typography</h2>
+            <div style="margin-top: 20px;">
+                <h1 style="margin-bottom: 10px;">Heading 1 (Outfit Bold 3.5rem)</h1>
+                <h2 style="margin-bottom: 10px;">Heading 2 (Outfit Bold 2.5rem)</h2>
+                <h3 style="margin-bottom: 10px;">Heading 3 (Outfit Bold 1.5rem)</h3>
+                <p>Body Text (Outfit Regular 1.125rem). Professional and friendly appearance with optimal readability.
+                </p>
+            </div>
+        </section>
+
+        <!-- Buttons -->
+        <section class="ds-section">
+            <h2>🟢 Buttons</h2>
+            <div class="ds-grid">
+                <div>
+                    <p class="component-label">Primary</p>
+                    <button class="btn btn-primary">Primary Button</button>
+                </div>
+                <div>
+                    <p class="component-label">Secondary</p>
+                    <button class="btn btn-secondary">Secondary Button</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Service Cards -->
+        <section class="ds-section">
+            <h2>🧩 Service Cards</h2>
+            <div class="ds-grid">
+                <div class="service-card" style="margin-top: 0;">
+                    <div class="service-icon"><i data-lucide="home"></i></div>
+                    <h3>Home Cleaning</h3>
+                    <p>Regular maintenance for a spotless living space.</p>
+                    <span class="price-badge">Starts at $29</span>
+                </div>
+                <div class="service-card featured" style="margin-top: 0;">
+                    <div class="service-icon"><i data-lucide="sparkles"></i></div>
+                    <h3>Deep Cleaning</h3>
+                    <p>Intensive sanitization and scrubbing.</p>
+                    <span class="price-badge">Starts at $79</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Forms -->
+        <section class="ds-section">
+            <h2>🧾 Input Fields</h2>
+            <div style="max-width: 400px; margin-top: 20px;">
+                <p class="component-label">Search / Pincode</p>
+                <div class="booking-form" style="border: 1px solid #eee; background: white;">
+                    <div class="input-group">
+                        <i data-lucide="map-pin"></i>
+                        <input type="text" placeholder="Enter your pincode">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Icons -->
+        <section class="ds-section">
+            <h2>✨ Icons</h2>
+            <div class="ds-grid" style="grid-template-columns: repeat(6, 1fr); text-align: center;">
+                <i data-lucide="home"></i>
+                <i data-lucide="car"></i>
+                <i data-lucide="shirt"></i>
+                <i data-lucide="scissors"></i>
+                <i data-lucide="recycle"></i>
+                <i data-lucide="sparkles"></i>
+            </div>
+        </section>
+    </div>
+
+    <script>
+        lucide.createIcons();
+    </script>
+</body>
+
+</html>

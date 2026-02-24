@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Services | BlinKlean</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .services-hero {
+            padding: 120px 0 60px;
+            background: #f0f7f6;
+            text-align: center;
+        }
+
+        .category-section {
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .category-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .category-header h2 {
+            font-size: 2.25rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .sub-category-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-left: 4px solid var(--primary);
+            padding-left: 15px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .service-img {
+            height: 180px;
+            overflow: hidden;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .service-body {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .service-body h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .price-tag {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .badge-pickup {
+            background: #E0F2FE;
+            color: #0369A1;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: 10px;
+        }
+
+        .market-note {
+            background: #FFFBEB;
+            padding: 15px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid #F59E0B;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+
+        .btn-full {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <div style="display:flex; align-items:center;">
+                    <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="48" fill="#009EE3" />
+                        <path d="M 50 13 Q 50 28 35 28 Q 50 28 50 43 Q 50 28 65 28 Q 50 28 50 13 Z" fill="white" />
+                        <path d="M 2 50 Q 50 30 98 50 A 48 48 0 0 1 2 50" fill="#1B9B3A" />
+                        <path d="M 0 50 Q 50 30 100 50" fill="none" stroke="white" stroke-width="5" />
+                        <path d="M 15 80 Q 40 50 85 55" fill="none" stroke="white" stroke-width="4"
+                            stroke-linecap="round" />
+                    </svg>
+                    <div style="display:flex; flex-direction:column; line-height:1.1; margin-left: 8px;">
+                        <div class="logo-text" style="font-size: 1.4rem; letter-spacing: -0.5px;"><span
+                                style="color:#009EE3">Blin</span><span style="color:#1B9B3A">Klean</span></div>
+                    </div>
+                </div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="services.html#home-cleaning">Home Cleaning</a>
+                <a href="services.html#vehicle-cleaning">Vehicle Cleaning</a>
+                <a href="services.html#laundry">Laundry</a>
+                <a href="services.html#recycling">Scrap & Recycling</a>
+                <a href="partner.html">Partner With Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="services-hero">
+        <div class="container">
+            <h1>Expert Clean-Tech Solutions</h1>
+            <p>Clean in a Blink, Smart Cleaning & Recycling tailored for your lifestyle.</p>
+        </div>
+    </header>
+
+    <!-- House Cleaning Services -->
+    <section id="home-cleaning" class="category-section">
+        <div class="container">
+            <div class="category-header">
+                <h2>1. HOUSE CLEANING SERVICES</h2>
+                <p>Professional residential and commercial cleaning solutions.</p>
+            </div>
+
+            <h3 class="sub-category-title"><i data-lucide="home"></i> Home Cleaning</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/1bhk_cleaning.png" alt="1BHK Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>1BHK Cleaning</h3>
+
+                        <span class="price-tag">₹1,499</span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=600"
+                            alt="2BHK Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>2BHK Cleaning</h3>
+
+                        <span class="price-tag">₹2,199</span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=600"
+                            alt="3BHK Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>3BHK Cleaning</h3>
+
+                        <span class="price-tag">₹2,999</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <h3 class="sub-category-title" style="margin-top: 40px;"><i data-lucide="sparkles"></i> Deep Cleaning</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/kitchen_deep_cleaning.png" alt="Kitchen Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>Kitchen Cleaning</h3>
+
+                        <span class="price-tag">₹1,299</span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/bathroom_cleaning.png" alt="Bathroom Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>Bathroom Cleaning</h3>
+
+                        <span class="price-tag">₹599 <small>/bath</small></span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/sofa_cleaning.png" alt="Sofa Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>Sofa Cleaning</h3>
+
+                        <span class="price-tag">₹399 <small>/seat</small></span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&q=80&w=600"
+                            alt="Carpet Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>Carpet Cleaning</h3>
+                        <p>Industrial grade deep cleaning and drying for carpets.</p>
+                        <span class="price-tag">₹25 <small>/sq.ft</small></span>
+                    </div>
+
+                </div>
+            </div>
+
+            <h3 class="sub-category-title" style="margin-top: 40px;"><i data-lucide="building"></i> Office Cleaning</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/office_cleaning.png" alt="Office Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>Commercial Office Cleaning</h3>
+
+                        <span class="price-tag">₹3 <small>/sq.ft</small></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle Cleaning Services -->
+    <section id="vehicle-cleaning" class="category-section" style="background: #fafafa;">
+        <div class="container">
+            <div class="category-header">
+                <h2>2. VEHICLE CLEANING SERVICES</h2>
+                <p>Doorstep washing and detailing for all your rides.</p>
+            </div>
+
+            <h3 class="sub-category-title"><i data-lucide="car"></i> Car Cleaning</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/car_exterior_wash.png" alt="Exterior Wash">
+                    </div>
+                    <div class="service-body">
+                        <h3>Exterior Wash</h3>
+
+                        <span class="price-tag">₹299</span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/car_interior_cleaning.png" alt="Interior + Exterior">
+                    </div>
+                    <div class="service-body">
+                        <h3>Interior + Exterior</h3>
+
+                        <span class="price-tag">₹499</span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/car_foam_wash.png" alt="Foam Wash">
+                    </div>
+                    <div class="service-body">
+                        <h3>Foam Wash</h3>
+
+                        <span class="price-tag">₹699</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <h3 class="sub-category-title" style="margin-top: 40px;"><i data-lucide="bike"></i> Bike & Others</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/bike_wash.png" alt="Bike Basic Wash">
+                    </div>
+                    <div class="service-body">
+                        <h3>🏍 Bike Basic Wash</h3>
+                        <span class="price-tag">₹149</span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/bike_foam_wash2.png" alt="Bike Foam Wash">
+                    </div>
+                    <div class="service-body">
+                        <h3>🏍 Bike Foam Wash</h3>
+                        <span class="price-tag">₹249</span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/auto_wash.png" alt="Auto Full Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>🛺 Auto Full Cleaning</h3>
+                        <span class="price-tag">₹299</span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?auto=format&fit=crop&q=80&w=600"
+                            alt="Cycle Basic Wash">
+                    </div>
+                    <div class="service-body">
+                        <h3>🚲 Cycle Basic Wash</h3>
+                        <span class="price-tag">₹99</span>
+                    </div>
+
+                </div>
+            </div>
+            <p style="margin-top: 30px; text-align: center; color: var(--text-muted); font-style: italic;">Future:
+                Monthly subscription model coming soon!</p>
+        </div>
+    </section>
+
+    <!-- Laundry Services -->
+    <section id="laundry" class="category-section">
+        <div class="container">
+            <div class="category-header">
+                <h2>3. LAUNDRY SERVICES</h2>
+                <span class="badge-pickup"><i data-lucide="truck"></i> Pickup & Drop Available</span>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-body">
+                        <h3>Wash & Fold</h3>
+
+                        <span class="price-tag">₹79 <small>/kg</small></span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-body">
+                        <h3>Wash & Iron</h3>
+
+                        <span class="price-tag">₹99 <small>/kg</small></span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-body">
+                        <h3>Steam Iron</h3>
+
+                        <span class="price-tag">₹10 <small>/cloth</small></span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-body">
+                        <h3>Dry Cleaning</h3>
+
+                        <span class="price-tag">Starts ₹149</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scrap & Recycling Services -->
+    <section id="recycling" class="category-section" style="background: #f0fdf4;">
+        <div class="container">
+            <div class="category-header">
+                <i data-lucide="recycle"
+                    style="color: var(--primary); width: 48px; height: 48px; margin-bottom: 10px;"></i>
+                <h2>4. SCRAP & RECYCLING SERVICES</h2>
+                <p>Monetize your waste and save the planet. Smart collection at your doorstep.</p>
+            </div>
+
+            <div class="market-note">
+                <strong><i data-lucide="info"></i> Market Rates:</strong> Items (Newspaper, Plastic, Iron, E-Waste,
+                Cardboard) are priced based on the current market price per kg.
+            </div>
+
+            <div class="coverage-areas"
+                style="margin-bottom: 30px; background: white; padding: 20px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);">
+                <h4 style="color: var(--primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                    <i data-lucide="map-pin"></i> Primary Service Zones
+                </h4>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; font-size: 0.9rem;">
+                    <span style="display: flex; align-items: center; gap: 5px;"><i data-lucide="check"
+                            style="width: 14px; color: var(--primary);"></i> Whitefield</span>
+                    <span style="display: flex; align-items: center; gap: 5px;"><i data-lucide="check"
+                            style="width: 14px; color: var(--primary);"></i> Indiranagar</span>
+                    <span style="display: flex; align-items: center; gap: 5px;"><i data-lucide="check"
+                            style="width: 14px; color: var(--primary);"></i> Koramangala</span>
+                    <span style="display: flex; align-items: center; gap: 5px;"><i data-lucide="check"
+                            style="width: 14px; color: var(--primary);"></i> HSR Layout</span>
+                    <span style="display: flex; align-items: center; gap: 5px;"><i data-lucide="check"
+                            style="width: 14px; color: var(--primary);"></i> Jayanagar</span>
+                    <span style="display: flex; align-items: center; gap: 5px;"><i data-lucide="check"
+                            style="width: 14px; color: var(--primary);"></i> Marathahalli</span>
+                    <span style="display: flex; align-items: center; gap: 5px;"><i data-lucide="check"
+                            style="width: 14px; color: var(--primary);"></i> Electronic City</span>
+                    <span style="display: flex; align-items: center; gap: 5px;"><i data-lucide="check"
+                            style="width: 14px; color: var(--primary);"></i> Bellandur</span>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.8rem; color: var(--text-muted);">*Serving all major areas in
+                    Bangalore. Check availability for your specific pincode on the home page.</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-body">
+                        <h3>Residential Pickup</h3>
+                        <p>Independent houses & villas.</p>
+                        <span class="badge-pickup">Available: All Zones</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-body">
+                        <h3>Apartment Bulk</h3>
+                        <p>Gated communities & societies.</p>
+                        <span class="badge-pickup">Available: East & South BLR</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-body">
+                        <h3>Office Scrap Disposal</h3>
+                        <p>IT parks & commercial hubs.</p>
+                        <span class="badge-pickup">Available: All Zones</span>
+                    </div>
+                </div>
+            </div>
+            <div class="future-plan-box"
+                style="margin-top:40px; text-align:center; padding:30px; border:2px dashed var(--primary); border-radius:var(--radius-lg); background: white;">
+                <i data-lucide="brain" style="color:var(--primary); width:48px; height:48px; margin-bottom:15px;"></i>
+                <h4 style="color:var(--primary); margin-bottom:10px; font-size:1.2rem;">Sustainability Tracking & AI
+                    Categorization</h4>
+                <p style="color:var(--text-muted); font-size:0.95rem; max-width:600px; margin: 0 auto;">Our future
+                    roadmap includes AI-based waste categorization and sustainability tracking to help you measure your
+                    environmental impact.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 BlinKlean. AI Powered Clean-Tech Platform</p>
+        </div>
+    </footer>
+
+    <script>lucide.createIcons();</script>
+</body>
+
+</html>
