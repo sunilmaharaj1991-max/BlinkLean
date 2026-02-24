@@ -5,10 +5,12 @@ import { ConfigService } from '@nestjs/config';
 
 @Injectable()
 export class JwtStrategy extends PassportStrategy(Strategy) {
-  constructor(private configService: ConfigService) {
+  constructor() {
+    const secret = process.env.JWT_SECRET || 'blinklean_fallback_secret_123';
+    console.log('JWT Strategy initialized with secret length:', secret.length);
     super({
       jwtFromRequest: ExtractJwt.fromAuthHeaderAsBearerToken(),
-      secretOrKey: configService.get<string>('JWT_SECRET') || 'blinklean_fallback_secret_123',
+      secretOrKey: secret,
     });
   }
 
