@@ -42,12 +42,8 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    overflow-x: hidden;
+    overflow-x: clip;
     width: 100%;
-}
-
-html {
-    overflow-x: hidden;
 }
 
 .container {
