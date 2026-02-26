@@ -264,13 +264,13 @@
                             <label>Material Type</label>
                             <select class="material-select" onchange="updateSummary()" required>
                                 <option value="" disabled selected>Select Material</option>
-                                <option value="newspapers" data-rate="15">Newspapers (₹15/kg)</option>
-                                <option value="cardboard" data-rate="10">Cardboard (₹10/kg)</option>
-                                <option value="plastic" data-rate="12">Plastic (₹12/kg)</option>
-                                <option value="metal" data-rate="30">Iron/Metal (₹30/kg)</option>
-                                <option value="aluminum" data-rate="110">Aluminum (₹110/kg)</option>
-                                <option value="copper" data-rate="400">Copper (₹400/kg)</option>
-                                <option value="e-waste" data-rate="25">Electronic Waste (₹25/kg)</option>
+                                <option value="newspapers">Newspapers</option>
+                                <option value="cardboard">Cardboard</option>
+                                <option value="plastic">Plastic</option>
+                                <option value="metal">Iron/Metal</option>
+                                <option value="aluminum">Aluminum</option>
+                                <option value="copper">Copper</option>
+                                <option value="e-waste">Electronic Waste</option>
                             </select>
                         </div>
                         <div class="form-group">
@@ -293,12 +293,12 @@
 
                 <div class="summary-box">
                     <div id="summaryItems"></div>
-                    <div class="summary-item total-row">
-                        <span>Estimated Selling Price</span>
-                        <span id="totalValue">₹ 0.00</span>
+                    <div class="summary-item total-row" style="color: var(--primary);">
+                        <span>Status</span>
+                        <span id="totalValue">Awaiting Collection</span>
                     </div>
-                    <p style="font-size: 0.8rem; color: #6b7280; margin-top: 10px;">* Final value will be calculated
-                        using our digital scales at the time of collection.</p>
+                    <p style="font-size: 0.85rem; color: #6b7280; margin-top: 10px;">* Final value will be determined at
+                        the time of collection based on current market rates and digital weighing scales.</p>
                 </div>
 
                 <button type="submit" class="btn btn-primary btn-full" style="margin-top: 30px; padding: 18px;">
@@ -334,13 +334,13 @@
                 <div class="form-group">
                     <select class="material-select" onchange="updateSummary()" required>
                         <option value="" disabled selected>Select Material</option>
-                        <option value="newspapers" data-rate="15">Newspapers (₹15/kg)</option>
-                        <option value="cardboard" data-rate="10">Cardboard (₹10/kg)</option>
-                        <option value="plastic" data-rate="12">Plastic (₹12/kg)</option>
-                        <option value="metal" data-rate="30">Iron/Metal (₹30/kg)</option>
-                        <option value="aluminum" data-rate="110">Aluminum (₹110/kg)</option>
-                        <option value="copper" data-rate="400">Copper (₹400/kg)</option>
-                        <option value="e-waste" data-rate="25">Electronic Waste (₹25/kg)</option>
+                        <option value="newspapers">Newspapers</option>
+                        <option value="cardboard">Cardboard</option>
+                        <option value="plastic">Plastic</option>
+                        <option value="metal">Iron/Metal</option>
+                        <option value="aluminum">Aluminum</option>
+                        <option value="copper">Copper</option>
+                        <option value="e-waste">Electronic Waste</option>
                     </select>
                 </div>
                 <div class="form-group">
@@ -358,7 +358,6 @@
 
         function updateSummary() {
             const rows = document.querySelectorAll('.item-row');
-            let totalValue = 0;
             const summaryContainer = document.getElementById('summaryItems');
             summaryContainer.innerHTML = '';
 
@@ -367,22 +366,17 @@
                 const weightInput = row.querySelector('.weight-input');
 
                 if (select.value && weightInput.value) {
-                    const rate = parseFloat(select.options[select.selectedIndex].getAttribute('data-rate'));
                     const weight = parseFloat(weightInput.value);
-                    const val = rate * weight;
-                    totalValue += val;
 
                     const summaryItem = document.createElement('div');
                     summaryItem.className = 'summary-item';
                     summaryItem.innerHTML = `
-                        <span>${select.options[select.selectedIndex].text.split('(')[0]} (${weight}kg)</span>
-                        <span>₹ ${val.toFixed(2)}</span>
+                        <span>${select.options[select.selectedIndex].text}</span>
+                        <span style="font-weight: 500;">${weight} kg</span>
                     `;
                     summaryContainer.appendChild(summaryItem);
                 }
             });
-
-            document.getElementById('totalValue').innerText = `₹ ${totalValue.toFixed(2)}`;
         }
 
         function validatePincode() {

@@ -631,36 +631,36 @@
                 </div>
                 <div
                     style="flex: 1; min-width: 300px; background: white; padding: 30px; border-radius: 20px; box-shadow: 0 20px 40px rgba(0,0,0,0.05); border: 1px solid #f1f5f9;">
-                    <h4 style="margin-bottom: 20px; color: var(--secondary);">Current Scrap Rates (Today)</h4>
+                    <h4 style="margin-bottom: 20px; color: var(--secondary);">Top Accepted Materials</h4>
                     <div style="display: flex; flex-direction: column; gap: 15px;">
                         <div
-                            style="display: flex; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px solid #f1f5f9;">
-                            <span>Newspapers</span>
-                            <strong>₹ 15 / kg</strong>
+                            style="padding-bottom: 10px; border-bottom: 1px solid #f1f5f9; display:flex; gap:10px; align-items:center;">
+                            <i data-lucide="check-circle" style="color:#22c55e; width: 18px;"></i> <span>Newspaper &
+                                Paper Waste</span>
                         </div>
                         <div
-                            style="display: flex; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px solid #f1f5f9;">
-                            <span>Plastic</span>
-                            <strong>₹ 12 / kg</strong>
+                            style="padding-bottom: 10px; border-bottom: 1px solid #f1f5f9; display:flex; gap:10px; align-items:center;">
+                            <i data-lucide="check-circle" style="color:#22c55e; width: 18px;"></i> <span>Hard & Soft
+                                Plastics</span>
                         </div>
                         <div
-                            style="display: flex; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px solid #f1f5f9;">
-                            <span>Cardboard</span>
-                            <strong>₹ 10 / kg</strong>
+                            style="padding-bottom: 10px; border-bottom: 1px solid #f1f5f9; display:flex; gap:10px; align-items:center;">
+                            <i data-lucide="check-circle" style="color:#22c55e; width: 18px;"></i> <span>Cardboard &
+                                Packaging</span>
                         </div>
                         <div
-                            style="display: flex; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px solid #f1f5f9;">
-                            <span>Iron / Metal</span>
-                            <strong>₹ 30 / kg</strong>
+                            style="padding-bottom: 10px; border-bottom: 1px solid #f1f5f9; display:flex; gap:10px; align-items:center;">
+                            <i data-lucide="check-circle" style="color:#22c55e; width: 18px;"></i> <span>Iron, Copper,
+                                Aluminum & Metals</span>
                         </div>
                         <div
-                            style="display: flex; justify-content: space-between; padding-bottom: 10px; border-bottom: 1px solid #f1f5f9;">
-                            <span>Aluminum</span>
-                            <strong>₹ 110 / kg</strong>
+                            style="padding-bottom: 10px; border-bottom: 1px solid #f1f5f9; display:flex; gap:10px; align-items:center;">
+                            <i data-lucide="check-circle" style="color:#22c55e; width: 18px;"></i> <span>Electronic
+                                Waste</span>
                         </div>
                     </div>
-                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 15px;">* Rates are updated daily
-                        based on global recycling markets.</p>
+                    <p style="font-size: 0.8rem; color: var(--text-muted); margin-top: 15px;">* Best market prices
+                        determined at pickup based on current recycling rates.</p>
                 </div>
             </div>
         </section>
@@ -716,7 +716,7 @@
                             </div>
                             <div class="user-details">
                                 <h4>Ananya Rao</h4>
-                                <span class="user-meta">Diamond Member • Mumbai</span>
+                                <span class="user-meta">Diamond Member • Bangalore</span>
                             </div>
                         </div>
                         <div class="premium-rating">
@@ -748,7 +748,7 @@
                             </div>
                             <div class="user-details">
                                 <h4>Kiran Patel</h4>
-                                <span class="user-meta">Verified Customer • Delhi</span>
+                                <span class="user-meta">Verified Customer • Bangalore</span>
                             </div>
                         </div>
                         <div class="premium-rating">
@@ -1098,6 +1098,49 @@
                 const scrolled = (winScroll / height) * 100;
                 scrollProgress.style.width = scrolled + "%";
             });
+        </script>
+
+        <!-- AI Chatbot Button -->
+        <div class="chatbot-btn" onclick="openChat()">
+            <i data-lucide="bot" style="width: 28px; height: 28px;"></i>
+        </div>
+        <style>
+            .chatbot-btn {
+                position: fixed;
+                bottom: 24px;
+                right: 24px;
+                background: linear-gradient(135deg, var(--primary), var(--primary-light));
+                color: white;
+                width: 65px;
+                height: 65px;
+                border-radius: 50%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-shadow: 0 4px 20px rgba(15, 76, 63, 0.4);
+                cursor: pointer;
+                z-index: 10000;
+                transition: transform 0.3s, box-shadow 0.3s;
+            }
+
+            .chatbot-btn:hover {
+                transform: scale(1.08) translateY(-5px);
+                box-shadow: 0 8px 25px rgba(15, 76, 63, 0.5);
+            }
+
+            @media(max-width: 768px) {
+                .chatbot-btn {
+                    bottom: 20px;
+                    right: 20px;
+                    width: 55px;
+                    height: 55px;
+                }
+            }
+        </style>
+        <script>
+            function openChat() {
+                alert("Connecting to BlinKlean AI Support System...");
+            }
         </script>
 </body>
 
