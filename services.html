@@ -61,19 +61,26 @@
         }
 
         .service-card:hover {
-            transform: translateY(-5px);
-            box-shadow: var(--shadow-md);
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(15, 76, 63, 0.1), 0 10px 10px -5px rgba(15, 76, 63, 0.04);
         }
 
         .service-img {
             height: 180px;
             overflow: hidden;
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+            position: relative;
         }
 
         .service-img img {
             width: 100%;
             height: 100%;
             object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
         }
 
         .service-body {
@@ -314,8 +321,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1550989460-0adf9ea622e2?auto=format&fit=crop&q=80&w=600"
-                            alt="Premium Polish">
+                        <img src="assets/images/premium_polish.png" alt="Premium Polish">
                     </div>
                     <div class="service-body">
                         <h3>Premium Polish</h3>
@@ -352,8 +358,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-img">
-                        <img src="https://images.unsplash.com/photo-1581009137142-d6ffb60fd30c?auto=format&fit=crop&q=80&w=600"
-                            alt="Auto Full Cleaning">
+                        <img src="assets/images/auto_wash.png" alt="Auto Full Cleaning">
                     </div>
                     <div class="service-body">
                         <h3>🛺 Auto Full Cleaning</h3>
@@ -389,8 +394,7 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-img" style="height: 180px;">
-                        <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&q=80&w=600"
-                            alt="Wash & Fold">
+                        <img src="assets/images/wash_and_fold.png" alt="Wash & Fold">
                     </div>
                     <div class="service-body">
                         <h3>Wash & Fold</h3>
@@ -425,8 +429,7 @@
                 </div>
                 <div class="service-card">
                     <div class="service-img" style="height: 180px;">
-                        <img src="https://images.unsplash.com/photo-1545173168-9f1947eebb7f?auto=format&fit=crop&q=80&w=600"
-                            alt="Dry Cleaning">
+                        <img src="assets/images/dry_cleaning.png" alt="Dry Cleaning">
                     </div>
                     <div class="service-body">
                         <h3>Dry Cleaning</h3>
