@@ -60,25 +60,23 @@
             position: relative;
         }
 
-        /* Fix for blank screen issue */
+        /* Fix for blank screen issue on mobile and older browsers */
         .reveal {
             opacity: 0;
             transform: translateY(30px);
-            transition: all 0.8s ease-out;
-            visibility: hidden;
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
         }
 
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
-            visibility: visible;
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 900px) {
             .reveal {
                 opacity: 1 !important;
                 transform: none !important;
-                visibility: visible !important;
+                transition: none !important;
             }
         }
     </style>
@@ -312,7 +310,7 @@
     <section id="how-it-works" class="how-it-works-premium reveal">
         <div class="container">
             <div class="section-header">
-                <h2>How BlinKl                          ean Works</h2>
+                <h2>How BlinKl ean Works</h2>
                 <p>Book professional cleaning in just a few simple steps. Fast • Reliable • Hassle-free</p>
             </div>
 
