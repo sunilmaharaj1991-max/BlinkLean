@@ -9,6 +9,7 @@ async function bootstrap() {
 
   app.use(helmet());
   app.use(compression());
+  app.enableCors(); // Enable CORS for frontend requests
 
   app.useGlobalPipes(new ValidationPipe());
 
