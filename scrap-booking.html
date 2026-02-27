@@ -171,6 +171,26 @@
             justify-content: center;
             margin: 0 auto 20px;
         }
+
+        @media(max-width: 640px) {
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .item-row {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .btn-remove {
+                width: 100%;
+                margin-top: 10px;
+            }
+
+            .booking-card {
+                padding: 20px;
+            }
+        }
     </style>
 </head>
 
@@ -393,8 +413,23 @@
             }
         }
 
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const navLinks = document.getElementById('navLinks');
+        if (menuBtn && navLinks) {
+            menuBtn.addEventListener('click', () => {
+                navLinks.classList.toggle('active');
+            });
+        }
+
         document.getElementById('scrapBookingForm').addEventListener('submit', async (e) => {
             e.preventDefault();
+            const submitBtn = e.target.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerText;
+
+            // Loading state
+            submitBtn.disabled = true;
+            submitBtn.innerText = 'Processing...';
 
             const items = [];
             document.querySelectorAll('.item-row').forEach(row => {
@@ -426,11 +461,15 @@
                 if (response.ok) {
                     document.getElementById('successModal').style.display = 'flex';
                 } else {
-                    alert('Something went wrong. Please check your details.');
+                    const errorData = await response.json().catch(() => ({}));
+                    alert('Error: ' + (errorData.message || 'Something went wrong. Please check your details.'));
                 }
             } catch (err) {
                 console.error(err);
-                alert('Connection error. Please try again.');
+                alert('Connection error. Please check your internet and try again.');
+            } finally {
+                submitBtn.disabled = false;
+                submitBtn.innerText = originalBtnText;
             }
         });
     </script>

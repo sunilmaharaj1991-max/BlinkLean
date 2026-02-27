@@ -55,8 +55,31 @@
             padding: 40px;
             border-radius: var(--radius-lg);
             width: 100%;
-            max-width: 400px;
+            max-width: 450px;
             text-align: center;
+            position: relative;
+        }
+
+        /* Fix for blank screen issue */
+        .reveal {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+            visibility: hidden;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+            visibility: visible;
+        }
+
+        @media (max-width: 768px) {
+            .reveal {
+                opacity: 1 !important;
+                transform: none !important;
+                visibility: visible !important;
+            }
         }
     </style>
 </head>
@@ -147,9 +170,26 @@
                 </div>
             </div>
 
-            <div class="hero-visual-bottom reveal">
-                <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1200"
-                    alt="BlinkLean Service illustration" class="hero-illustration">
+            <!-- Hero Slider Illustration (Restored) -->
+            <div class="hero-visual-bottom reveal" style="height: auto; min-height: 300px; margin-top: 30px;">
+                <div class="hero-slider"
+                    style="position: relative; height: 500px; width: 100%; max-width: 1100px; margin: 0 auto; border-radius: 24px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.1);">
+                    <div class="slide active">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=1200"
+                            alt="Home Cleaning" class="hero-illustration"
+                            style="width: 100%; height: 100%; object-fit: cover; transform: none;">
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&q=80&w=1200"
+                            alt="Car Care" class="hero-illustration"
+                            style="width: 100%; height: 100%; object-fit: cover; transform: none;">
+                    </div>
+                    <div class="slide">
+                        <img src="https://images.unsplash.com/photo-1545173153-5d07c3f8e30a?auto=format&fit=crop&q=80&w=1200"
+                            alt="Laundry Services" class="hero-illustration"
+                            style="width: 100%; height: 100%; object-fit: cover; transform: none;">
+                    </div>
+                </div>
             </div>
         </div>
 
@@ -272,7 +312,7 @@
     <section id="how-it-works" class="how-it-works-premium reveal">
         <div class="container">
             <div class="section-header">
-                <h2>How BlinKlean Works</h2>
+                <h2>How BlinKl                          ean Works</h2>
                 <p>Book professional cleaning in just a few simple steps. Fast • Reliable • Hassle-free</p>
             </div>
 
@@ -436,11 +476,24 @@
                     </div>
                     <div class="trending-card-body">
                         <h3>Bathroom Deep Cleaning</h3>
+                        <p class="benefit-line">Intensive cleaning for a germ-free bathroom.</p>
+                        <div class="meta-row">
+                            <div class="meta-item"><i data-lucide="clock"></i> 90 Mins</div>
+                            <div class="meta-item"><i data-lucide="shield"></i> 30-Day Guarantee</div>
+                        </div>
+                        <div class="why-book-strip">
+                            <ul>
+                                <li>Deep tile scrubbing</li>
+                                <li>Mirror and glass polishing</li>
+                            </ul>
+                        </div>
                         <div class="card-footer">
                             <div class="price-display">
                                 <span class="label">Starts at</span>
                                 <span class="amount">₹499</span>
                             </div>
+                            <a href="services.html#home-cleaning" class="book-btn">Book Now <i
+                                    data-lucide="arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -457,12 +510,20 @@
                     </div>
                     <div class="trending-card-body">
                         <h3>Kitchen Cleaning</h3>
-
+                        <p class="benefit-line">Deep degreasing and sanitization of your kitchen.</p>
+                        <div class="why-book-strip">
+                            <ul>
+                                <li>Chimney & Exhaust care</li>
+                                <li>Cabinet degreasing</li>
+                            </ul>
+                        </div>
                         <div class="card-footer">
                             <div class="price-display">
                                 <span class="label">Starts at</span>
                                 <span class="amount">₹1,299</span>
                             </div>
+                            <a href="services.html#home-cleaning" class="book-btn">Book Now <i
+                                    data-lucide="arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -471,7 +532,7 @@
                 <div class="trending-card">
                     <div class="card-banner">
                         <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&q=80&w=400"
-                            alt="Sofa Cleaning">
+                            alt="Sofa Spa Cleaning">
                         <div class="trust-badge-container">
                             <div class="trust-badge"><i data-lucide="star"></i> 4.7 (3.1k)</div>
                             <div class="verified-tag"><i data-lucide="shield-check"></i> Verified</div>
@@ -479,10 +540,78 @@
                     </div>
                     <div class="trending-card-body">
                         <h3>Sofa Spa Cleaning</h3>
+                        <p class="benefit-line">Premium shampooing and stain removal for sofas.</p>
+                        <div class="why-book-strip">
+                            <ul>
+                                <li>Fabric rejuvenating</li>
+                                <li>Stain removal expert</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <div class="price-display">
+                                <span class="label">Starts at</span>
+                                <span class="amount">₹599</span>
+                            </div>
+                            <a href="services.html#home-cleaning" class="book-btn">Book Now <i
+                                    data-lucide="arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
 
-                        <div class="price-display">
-                            <span class="label">Starts at</span>
-                            <span class="amount">₹599</span>
+                <!-- Dry Cleaning Card -->
+                <div class="trending-card">
+                    <div class="card-banner">
+                        <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&q=80&w=400"
+                            alt="Premium Dry Cleaning">
+                        <div class="trust-badge-container">
+                            <div class="trust-badge"><i data-lucide="star"></i> 4.9 (1.2k)</div>
+                            <div class="verified-tag"><i data-lucide="shield-check"></i> Verified</div>
+                        </div>
+                    </div>
+                    <div class="trending-card-body">
+                        <h3>Premium Dry Cleaning</h3>
+                        <p class="benefit-line">Professional care for your delicate clothes.</p>
+                        <div class="why-book-strip">
+                            <ul>
+                                <li>Eco-friendly chemicals</li>
+                                <li>Safe for delicate fabrics</li>
+                            </ul>
+                        </div>
+                        <div class="card-footer">
+                            <div class="price-display">
+                                <span class="label">Starts at</span>
+                                <span class="amount">₹149</span>
+                            </div>
+                            <a href="services.html#laundry" class="book-btn">Book Now <i
+                                    data-lucide="arrow-right"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Premium Polish Card -->
+                <div class="trending-card">
+                    <div class="card-banner">
+                        <img src="https://images.unsplash.com/photo-1599256621730-535171e28e50?auto=format&fit=crop&q=80&w=400"
+                            alt="Premium Car Polish">
+                        <div class="trust-badge-container">
+                            <div class="trust-badge"><i data-lucide="star"></i> 4.8 (950)</div>
+                            <div class="verified-tag"><i data-lucide="shield-check"></i> Verified</div>
+                        </div>
+                    </div>
+                    <div class="trending-card-body">
+                        <h3>Premium Car Polish</h3>
+                        <p class="benefit-line">Ultimate shine and protection for your car.</p>
+                        <div class="meta-row">
+                            <div class="meta-item"><i data-lucide="clock"></i> 3 Hours</div>
+                            <div class="meta-item"><i data-lucide="sparkles"></i> Wax Finish</div>
+                        </div>
+                        <div class="card-footer">
+                            <div class="price-display">
+                                <span class="label">Starts at</span>
+                                <span class="amount">₹699</span>
+                            </div>
+                            <a href="services.html#vehicle-cleaning" class="book-btn">Book Now <i
+                                    data-lucide="arrow-right"></i></a>
                         </div>
                     </div>
                 </div>
@@ -518,7 +647,6 @@
                             <span class="card-badge">Essential</span>
                         </div>
                         <div class="card-content">
-
                             <h3>Bike Care Plan</h3>
                             <div class="price-box">
                                 <span class="price-amount">₹299</span>
@@ -527,7 +655,14 @@
                                     <i data-lucide="trending-down"></i> Save up to 20%
                                 </div>
                             </div>
-
+                            <div class="why-book-strip" style="margin-top: 20px;">
+                                <ul>
+                                    <li>2 Premium Foam Washes</li>
+                                    <li>Chain Cleaning & Lube</li>
+                                    <li>Full Body Polish</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary btn-full" style="margin-top: 15px;">Subscribe Now</button>
                         </div>
                     </div>
 
@@ -539,7 +674,6 @@
                             <span class="card-badge popular">Most Popular</span>
                         </div>
                         <div class="card-content">
-
                             <h3>Car Care Plan</h3>
                             <div class="price-box">
                                 <span class="price-amount">₹799</span>
@@ -548,7 +682,14 @@
                                     <i data-lucide="trending-down"></i> Best Value - 30% Off
                                 </div>
                             </div>
-
+                            <div class="why-book-strip" style="margin-top: 20px;">
+                                <ul>
+                                    <li>2 Full Interior Details</li>
+                                    <li>Weekly Exterior Wash</li>
+                                    <li>Tire & Dashboard Polish</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary btn-full" style="margin-top: 15px;">Subscribe Now</button>
                         </div>
                     </div>
 
@@ -560,7 +701,6 @@
                             <span class="card-badge">All-In-One</span>
                         </div>
                         <div class="card-content">
-
                             <h3>Home Care Membership</h3>
                             <div class="price-box">
                                 <span class="price-amount">₹1,999</span>
@@ -569,6 +709,14 @@
                                     <i data-lucide="trending-down"></i> Save ₹500+ monthly
                                 </div>
                             </div>
+                            <div class="why-book-strip" style="margin-top: 20px;">
+                                <ul>
+                                    <li>1 Full Deep Cleaning</li>
+                                    <li>2 Pest Control Sessions</li>
+                                    <li>Priority Booking Access</li>
+                                </ul>
+                            </div>
+                            <button class="btn btn-primary btn-full" style="margin-top: 15px;">Subscribe Now</button>
                         </div>
                     </div>
                 </div>
@@ -685,12 +833,12 @@
                         <div class="user-profile">
                             <div class="user-photo-wrapper">
                                 <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&q=80&w=120"
-                                    alt="Rohit Sharma" class="user-photo">
+                                    alt="Mahesh Gowda" class="user-photo">
                                 <div class="verified-badge"><i data-lucide="check"></i></div>
                             </div>
                             <div class="user-details">
-                                <h4>Karthik Gowda</h4>
-                                <span class="user-meta">Verified Customer • Bangalore</span>
+                                <h4>Mahesh Gowda</h4>
+                                <span class="user-meta">Verified Customer • Banashankari, BLR</span>
                             </div>
                         </div>
                         <div class="premium-rating">
@@ -721,8 +869,8 @@
                                 <div class="verified-badge"><i data-lucide="check"></i></div>
                             </div>
                             <div class="user-details">
-                                <h4>Nanditha Reddy</h4>
-                                <span class="user-meta">Diamond Member • Bangalore</span>
+                                <h4>Sowmya Reddy</h4>
+                                <span class="user-meta">Diamond Member • Indiranagar, BLR</span>
                             </div>
                         </div>
                         <div class="premium-rating">
@@ -753,8 +901,8 @@
                                 <div class="verified-badge"><i data-lucide="check"></i></div>
                             </div>
                             <div class="user-details">
-                                <h4>Ganesh Shankar</h4>
-                                <span class="user-meta">Verified Customer • Bangalore</span>
+                                <h4>Ananth Kumar</h4>
+                                <span class="user-meta">Verified Customer • Malleshwaram, BLR</span>
                             </div>
                         </div>
                         <div class="premium-rating">
@@ -906,17 +1054,84 @@
             </div>
         </footer>
 
-        <script>
-            // Initialize Lucide icons
-            lucide.createIcons();
 
-            // Mobile menu toggle
+        <!-- Login Modal (Restored & Enhanced) -->
+        <div id="loginModal" class="modal">
+            <div class="modal-content">
+                <button onclick="closeLogin()" class="close-btn"
+                    style="position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 1.5rem; cursor: pointer; color: #999;">&times;</button>
+                <div class="logo-text" style="font-size: 1.8rem; margin-bottom: 20px;">Blin<span
+                        style="color:#1B9B3A">Klean</span></div>
+                <h3>Welcome Back</h3>
+                <p style="margin-bottom: 20px; color: var(--text-muted);">Login to manage your bookings</p>
+
+                <div class="social-login-options"
+                    style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 20px;">
+                    <button class="btn btn-secondary"
+                        style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <img src="https://www.gstatic.com/images/branding/product/1x/gsa_512dp.png" alt="Google"
+                            style="width: 18px;">
+                        Continue with Google
+                    </button>
+                    <button class="btn btn-secondary"
+                        style="width: 100%; display: flex; align-items: center; justify-content: center; gap: 10px;">
+                        <i data-lucide="mail" style="width: 18px;"></i> Continue with Email
+                    </button>
+                </div>
+
+                <div style="display: flex; align-items: center; gap: 10px; margin-bottom: 20px;">
+                    <hr style="flex: 1; border: none; border-top: 1px solid #eee;">
+                    <span style="font-size: 0.8rem; color: #999; font-weight: 500;">OR</span>
+                    <hr style="flex: 1; border: none; border-top: 1px solid #eee;">
+                </div>
+
+                <div id="login-step-1">
+                    <div style="position: relative; margin-bottom: 15px;">
+                        <span
+                            style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); font-weight: 600; color: #666;">+91</span>
+                        <input type="tel" placeholder="Mobile Number"
+                            style="width:100%; padding:14px 14px 14px 55px; border:1px solid #eee; border-radius:10px; outline: none; transition: border-color 0.3s;"
+                            onfocus="this.style.borderColor='#009EE3'" onblur="this.style.borderColor='#eee'">
+                    </div>
+                    <button class="btn btn-primary btn-full" onclick="sendOTP()" style="padding: 14px;">Get OTP</button>
+                </div>
+                <div id="login-step-2" style="display:none;">
+                    <input type="text" placeholder="Enter 6-digit OTP"
+                        style="width:100%; padding:14px; margin-bottom:15px; border:1px solid #eee; border-radius:10px; text-align: center; letter-spacing: 5px; font-weight: 700;">
+                    <button class="btn btn-primary btn-full" onclick="verifyOTP()" style="padding: 14px;">Verify &
+                        Login</button>
+                    <p style="margin-top: 15px; font-size: 0.85rem; color: var(--text-muted);">Didn't receive? <a
+                            href="#" style="color: var(--primary); font-weight: 600;">Resend OTP</a></p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // --- Helper Functions ---
+            const safeCreateIcons = () => {
+                try {
+                    if (typeof lucide !== 'undefined') lucide.createIcons();
+                } catch (e) { console.warn('Lucide icons error:', e); }
+            };
+
+            // --- Initialization ---
+            safeCreateIcons();
+
+            // Mobile Menu Toggle
             const menuBtn = document.getElementById('menuBtn');
             const navLinks = document.getElementById('navLinks');
 
-            menuBtn.addEventListener('click', () => {
-                navLinks.classList.toggle('active');
-            });
+            if (menuBtn && navLinks) {
+                menuBtn.addEventListener('click', () => {
+                    navLinks.classList.toggle('active');
+                });
+
+                document.querySelectorAll('.nav-links a').forEach(link => {
+                    link.addEventListener('click', () => {
+                        navLinks.classList.remove('active');
+                    });
+                });
+            }
 
             // Hero Slider Logic
             const slides = document.querySelectorAll('.hero-slider .slide');
@@ -926,38 +1141,8 @@
                     slides[currentSlide].classList.remove('active');
                     currentSlide = (currentSlide + 1) % slides.length;
                     slides[currentSlide].classList.add('active');
-                }, 4000); // changes image every 4 seconds
+                }, 4000);
             }
-
-        </script>
-        <!-- Login Modal -->
-        <div id="loginModal" class="modal">
-            <div class="modal-content">
-                <div class="logo-text">Blin<span>Klean</span></div>
-                <h3>Login with OTP</h3>
-                <p style="margin-bottom: 20px; color: var(--text-muted);">Enter your mobile number to get started.</p>
-                <div id="login-step-1">
-                    <input type="tel" placeholder="Enter Mobile Number"
-                        style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ddd; border-radius:4px;">
-                    <button class="btn btn-primary btn-full" onclick="sendOTP()">Send OTP</button>
-                </div>
-                <div id="login-step-2" style="display:none;">
-                    <input type="text" placeholder="Enter 6-digit OTP"
-                        style="width:100%; padding:12px; margin-bottom:15px; border:1px solid #ddd; border-radius:4px;">
-                    <button class="btn btn-primary btn-full" onclick="verifyOTP()">Verify & Login</button>
-                </div>
-                <button onclick="closeLogin()"
-                    style="margin-top:15px; background:none; border:none; color:var(--text-muted); cursor:pointer;">Close</button>
-            </div>
-        </div>
-
-        <script>
-            // Safely create icons
-            try {
-                if (typeof lucide !== 'undefined') {
-                    lucide.createIcons();
-                }
-            } catch (e) { console.warn('Lucide icons error:', e); }
 
             // Login Modal Functions
             function openLogin() { document.getElementById('loginModal').style.display = 'flex'; }
@@ -986,12 +1171,22 @@
                     result.style.color = '#dc2626';
                     result.innerHTML = '<i data-lucide="info" style="width:14px; height:14px; vertical-align:middle;"></i> Coming soon to this area.';
                 }
-                try {
-                    if (typeof lucide !== 'undefined') lucide.createIcons();
-                } catch (e) { }
+                safeCreateIcons();
             }
 
-            // --- Snabbit Inspired Animations ---
+            // Handle CTA Form
+            document.querySelectorAll('.booking-form').forEach(form => {
+                form.addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    const input = form.querySelector('input');
+                    const heroInput = document.getElementById('pincode');
+                    if (input && heroInput) {
+                        heroInput.value = input.value;
+                        checkServiceArea();
+                        document.getElementById('pincode').scrollIntoView({ behavior: 'smooth', block: 'center' });
+                    }
+                });
+            });
 
             // Reveal Animations on Scroll
             if ('IntersectionObserver' in window) {
@@ -1005,14 +1200,17 @@
 
                 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
             } else {
-                // Fallback for older browsers
                 document.querySelectorAll('.reveal').forEach(el => el.classList.add('active'));
             }
 
-            // App Screen Switcher logic
+            // Fallback for animations
+            setTimeout(() => {
+                document.querySelectorAll('.reveal:not(.active)').forEach(el => el.classList.add('active'));
+            }, 3000);
+
+            // App Screen Switcher
             const appSteps = document.querySelectorAll('.app-step');
             const appScreenImg = document.getElementById('currentScreen');
-
             if (appScreenImg) {
                 appSteps.forEach(step => {
                     step.addEventListener('mouseenter', () => {
@@ -1028,31 +1226,21 @@
                 });
             }
 
-            // --- Premium Interactive Animations ---
-
-            // 1. Mouse Parallax for Hero Illustration
+            // Interactive Effects
             const heroIllustration = document.querySelector('.hero-illustration');
             if (heroIllustration) {
                 document.addEventListener('mousemove', (e) => {
-                    const { clientX, clientY } = e;
-                    const centerX = window.innerWidth / 2;
-                    const centerY = window.innerHeight / 2;
-
-                    const moveX = (clientX - centerX) / 50;
-                    const moveY = (clientY - centerY) / 50;
-
+                    const moveX = (e.clientX - window.innerWidth / 2) / 50;
+                    const moveY = (e.clientY - window.innerHeight / 2) / 50;
                     heroIllustration.style.transform = `perspective(1000px) rotateX(${2 - moveY}deg) rotateY(${moveX}deg) translateZ(10px)`;
                 });
             }
 
-            // 2. Number Counter Animation
             const countUpElements = document.querySelectorAll('.count-up');
             const startCountUp = (el) => {
                 const target = parseInt(el.getAttribute('data-target'));
                 let count = 0;
-                const speed = 2000; // 2 seconds duration
-                const increment = target / (speed / 16); // 60fps approx
-
+                const increment = target / (2000 / 16);
                 const updateCount = () => {
                     count += increment;
                     if (count < target) {
@@ -1079,291 +1267,28 @@
                 countUpElements.forEach(el => startCountUp(el));
             }
 
-            // 3. Magnetic Button Effect
             const magneticButtons = document.querySelectorAll('.app-btn-premium, .hero-pincode-checker-centered button');
             magneticButtons.forEach(btn => {
                 btn.addEventListener('mousemove', (e) => {
-                    const position = btn.getBoundingClientRect();
-                    const x = e.clientX - position.left - position.width / 2;
-                    const y = e.clientY - position.top - position.height / 2;
-
-                    btn.style.transform = `translate(${x * 0.3}px, ${y * 0.5}px)`;
+                    const pos = btn.getBoundingClientRect();
+                    const x = (e.clientX - pos.left - pos.width / 2) * 0.3;
+                    const y = (e.clientY - pos.top - pos.height / 2) * 0.5;
+                    btn.style.transform = `translate(${x}px, ${y}px)`;
                 });
-
-                btn.addEventListener('mouseleave', () => {
-                    btn.style.transform = 'translate(0px, 0px)';
-                });
+                btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0, 0)'; });
             });
 
-            // 4. Page Scroll Progress Bar
+            // Scroll Progress
             const scrollProgress = document.createElement('div');
-            scrollProgress.style.cssText = `
-                position: fixed;
-                top: 0;
-                left: 0;
-                height: 3px;
-                background: linear-gradient(to right, #009EE3, #1B9B3A);
-                z-index: 10001;
-                transition: width 0.1s ease;
-                width: 0%;
-            `;
+            scrollProgress.style.cssText = `position:fixed;top:0;left:0;height:3px;background:linear-gradient(to right,#009EE3,#1B9B3A);z-index:10001;transition:width 0.1s;width:0%;`;
             document.body.appendChild(scrollProgress);
-
             window.addEventListener('scroll', () => {
                 const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
                 const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
-                const scrolled = (winScroll / height) * 100;
-                scrollProgress.style.width = scrolled + "%";
+                scrollProgress.style.width = ((winScroll / height) * 100) + "%";
             });
-        </script>
 
-        <!-- AI Chatbot Interface -->
-        <div class="chat-widget" id="chatWidget">
-            <div class="chat-header">
-                <div class="chat-brand">
-                    <img src="https://cdn-icons-png.flaticon.com/512/8943/8943377.png" alt="AI Agent">
-                    <div>
-                        <strong>BlinKlean AI</strong>
-                        <span>Online</span>
-                    </div>
-                </div>
-                <button class="close-chat" onclick="toggleChat()"><i data-lucide="x"></i></button>
-            </div>
-            <div class="chat-body" id="chatBody">
-                <div class="message ai-message">
-                    Hi! I'm your BlinKlean AI Assistant. How can I help you today?
-                </div>
-            </div>
-            <div class="chat-faq-options" id="faqOptions">
-                <button onclick="sendFAQ('How much does home cleaning cost?')">Home Cleaning Cost</button>
-                <button onclick="sendFAQ('Do you offer waterless car wash?')">Vehicle Cleaning</button>
-                <button onclick="sendFAQ('How to sell scrap?')">Sell Scrap</button>
-            </div>
-            <div class="chat-input-area">
-                <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
-                <button onclick="sendMessage()"><i data-lucide="send" style="width: 20px; height: 20px;"></i></button>
-            </div>
-        </div>
-
-        <!-- AI Chatbot Button -->
-        <div class="chatbot-btn" onclick="toggleChat()"
-            style="display: flex; align-items: center; justify-content: center;">
-            <img src="https://cdn-icons-png.flaticon.com/512/8943/8943377.png" alt="Chatbot"
-                style="width: 32px; height: 32px; filter: brightness(0) invert(1);">
-        </div>
-
-        <style>
-            .chatbot-btn {
-                position: fixed;
-                bottom: 24px;
-                right: 24px;
-                background: linear-gradient(135deg, var(--primary), var(--primary-light));
-                width: 65px;
-                height: 65px;
-                border-radius: 50%;
-                box-shadow: 0 4px 20px rgba(15, 76, 63, 0.4);
-                cursor: pointer;
-                z-index: 10000;
-                transition: transform 0.3s, box-shadow 0.3s;
-            }
-
-            .chatbot-btn:hover {
-                transform: scale(1.08) translateY(-5px);
-                box-shadow: 0 8px 25px rgba(15, 76, 63, 0.5);
-            }
-
-            .chat-widget {
-                position: fixed;
-                bottom: 100px;
-                right: 24px;
-                width: 350px;
-                height: 480px;
-                background: white;
-                border-radius: 20px;
-                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
-                z-index: 9999;
-                display: none;
-                flex-direction: column;
-                overflow: hidden;
-                border: 1px solid rgba(0, 0, 0, 0.05);
-                opacity: 0;
-                transform: translateY(20px);
-                transition: opacity 0.3s, transform 0.3s;
-            }
-
-            .chat-widget.active {
-                display: flex;
-                opacity: 1;
-                transform: translateY(0);
-            }
-
-            .chat-header {
-                background: var(--primary);
-                color: white;
-                padding: 15px 20px;
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .chat-brand {
-                display: flex;
-                align-items: center;
-                gap: 12px;
-            }
-
-            .chat-brand img {
-                width: 36px;
-                height: 36px;
-                border-radius: 50%;
-                background: white;
-                padding: 4px;
-            }
-
-            .chat-brand div {
-                display: flex;
-                flex-direction: column;
-            }
-
-            .chat-brand strong {
-                font-size: 1.1rem;
-            }
-
-            .chat-brand span {
-                font-size: 0.8rem;
-                color: rgba(255, 255, 255, 0.8);
-            }
-
-            .close-chat {
-                background: none;
-                border: none;
-                color: white;
-                cursor: pointer;
-                opacity: 0.8;
-                transition: opacity 0.2s;
-            }
-
-            .close-chat:hover {
-                opacity: 1;
-            }
-
-            .chat-body {
-                flex: 1;
-                padding: 20px;
-                overflow-y: auto;
-                background: #f8fafc;
-                display: flex;
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            .message {
-                max-width: 85%;
-                padding: 12px 16px;
-                border-radius: 15px;
-                font-size: 0.95rem;
-                line-height: 1.4;
-            }
-
-            .ai-message {
-                background: white;
-                color: var(--text-main);
-                align-self: flex-start;
-                border-bottom-left-radius: 4px;
-                box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
-            }
-
-            .user-message {
-                background: var(--primary);
-                color: white;
-                align-self: flex-end;
-                border-bottom-right-radius: 4px;
-            }
-
-            .chat-faq-options {
-                padding: 10px 15px;
-                background: #f8fafc;
-                display: flex;
-                gap: 8px;
-                overflow-x: auto;
-                scrollbar-width: none;
-                border-top: 1px solid #e2e8f0;
-            }
-
-            .chat-faq-options::-webkit-scrollbar {
-                display: none;
-            }
-
-            .chat-faq-options button {
-                white-space: nowrap;
-                padding: 8px 15px;
-                background: white;
-                border: 1px solid var(--primary);
-                color: var(--primary);
-                border-radius: 20px;
-                font-size: 0.85rem;
-                cursor: pointer;
-                transition: all 0.2s;
-            }
-
-            .chat-faq-options button:hover {
-                background: var(--primary);
-                color: white;
-            }
-
-            .chat-input-area {
-                padding: 15px;
-                background: white;
-                border-top: 1px solid #f1f5f9;
-                display: flex;
-                gap: 10px;
-            }
-
-            .chat-input-area input {
-                flex: 1;
-                padding: 12px 15px;
-                border: 1px solid #e2e8f0;
-                border-radius: 20px;
-                outline: none;
-                font-size: 0.95rem;
-            }
-
-            .chat-input-area button {
-                background: var(--primary);
-                color: white;
-                border: none;
-                width: 42px;
-                height: 42px;
-                border-radius: 50%;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                cursor: pointer;
-                transition: transform 0.2s;
-            }
-
-            .chat-input-area button:hover {
-                transform: scale(1.05);
-            }
-
-            @media(max-width: 768px) {
-                .chatbot-btn {
-                    bottom: 20px;
-                    right: 20px;
-                    width: 55px;
-                    height: 55px;
-                }
-
-                .chat-widget {
-                    bottom: 85px;
-                    right: 15px;
-                    left: 15px;
-                    width: auto;
-                    height: 60vh;
-                }
-            }
-        </style>
-        <script>
+            // AI Chatbot
             function toggleChat() {
                 const widget = document.getElementById('chatWidget');
                 if (widget.classList.contains('active')) {
@@ -1375,50 +1300,35 @@
                 }
             }
 
-            function handleKeyPress(e) {
-                if (e.key === 'Enter') {
-                    sendMessage();
-                }
-            }
+            function handleKeyPress(e) { if (e.key === 'Enter') sendMessage(); }
 
             function sendFAQ(text) {
                 document.getElementById('chatInput').value = text;
                 sendMessage();
-                document.getElementById('faqOptions').style.display = 'none';
+                const faqOptions = document.getElementById('faqOptions');
+                if (faqOptions) faqOptions.style.display = 'none';
             }
 
             function sendMessage() {
                 const input = document.getElementById('chatInput');
                 const text = input.value.trim();
                 if (!text) return;
-
-                // Add user message
                 appendMessage(text, 'user-message');
                 input.value = '';
-
-                // Bot response logic
                 setTimeout(() => {
                     let response = "I'm still learning! For urgent help, please WhatsApp us at 9876543210.";
                     const lowerText = text.toLowerCase();
-
-                    if (lowerText.includes('cost') || lowerText.includes('price')) {
-                        response = "Our Home Cleaning starts at ₹499 and Vehicle Cleaning at ₹99. Would you like to view our full Services page?";
-                    } else if (lowerText.includes('waterless') || lowerText.includes('car')) {
-                        response = "Yes! We specialize in premium waterless car and bike wash starting from ₹99. All eco-friendly!";
-                    } else if (lowerText.includes('scrap') || lowerText.includes('recycle')) {
-                        response = "You can sell Newspapers, Plastics, E-Waste and Metal to us for cash! Just tap 'Scrap & Recycling' on the top menu to schedule a pickup.";
-                    } else if (lowerText.includes('hello') || lowerText.includes('hi')) {
-                        response = "Hello! I'm ready to assist you. Are you looking to clean your home, vehicle, or sell scrap today?";
-                    }
-
+                    if (lowerText.includes('cost') || lowerText.includes('price')) response = "Our Home Cleaning starts at ₹499 and Vehicle Cleaning at ₹99.";
+                    else if (lowerText.includes('waterless') || lowerText.includes('car')) response = "Yes! We specialize in premium waterless car and bike wash starting from ₹99.";
+                    else if (lowerText.includes('scrap') || lowerText.includes('recycle')) response = "You can sell Newspapers, Plastics, E-Waste and Metal for cash! Tap 'Scrap & Recycling' to schedule.";
                     appendMessage(response, 'ai-message');
-                    // Ensure icon is created
-                    lucide.createIcons();
+                    safeCreateIcons();
                 }, 1000);
             }
 
             function appendMessage(text, className) {
                 const body = document.getElementById('chatBody');
+                if (!body) return;
                 const msg = document.createElement('div');
                 msg.className = `message ${className}`;
                 msg.innerText = text;
