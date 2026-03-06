@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vehicle Cleaning | Blinklean</title>
+    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="whatsapp-float.css">
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5LKLN2026"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-B5LKLN2026', { 'enhanced_measurement': true });
+    </script>
+    <script src="blink-analytics.js" defer></script>
+    <style>
+        .services-hero {
+            padding: 120px 0 60px;
+            background: #f0f7f6;
+            text-align: center;
+        }
+
+        .category-section {
+            padding: 60px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .category-header {
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        .category-header h2 {
+            font-size: 2.25rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .sub-category-title {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-bottom: 25px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-left: 4px solid var(--primary);
+            padding-left: 15px;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background: var(--white);
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            border: 1px solid rgba(0, 0, 0, 0.03);
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 20px 25px -5px rgba(15, 76, 63, 0.1), 0 10px 10px -5px rgba(15, 76, 63, 0.04);
+        }
+
+        .service-img {
+            height: 180px;
+            overflow: hidden;
+            border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+            position: relative;
+        }
+
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+
+        .service-body {
+            padding: 20px;
+            flex-grow: 1;
+        }
+
+        .service-body h3 {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .price-tag {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .badge-pickup {
+            background: #E0F2FE;
+            color: #0369A1;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            margin-top: 10px;
+        }
+
+        .market-note {
+            background: #FFFBEB;
+            padding: 15px;
+            border-radius: var(--radius-md);
+            border-left: 4px solid #F59E0B;
+            margin-bottom: 30px;
+            font-size: 0.9rem;
+        }
+
+        .btn-full {
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar">
+        <div class="container nav-container">
+            <a href="index.html" class="logo-wrapper">
+                <div style="display:flex; align-items:center;">
+                    <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                        <circle cx="50" cy="50" r="48" fill="#009EE3" />
+                        <path d="M 50 13 Q 50 28 35 28 Q 50 28 50 43 Q 50 28 65 28 Q 50 28 50 13 Z" fill="white" />
+                        <path d="M 2 50 Q 50 30 98 50 A 48 48 0 0 1 2 50" fill="#1B9B3A" />
+                        <path d="M 0 50 Q 50 30 100 50" fill="none" stroke="white" stroke-width="5" />
+                        <path d="M 15 80 Q 40 50 85 55" fill="none" stroke="white" stroke-width="4"
+                            stroke-linecap="round" />
+                    </svg>
+                    <div style="display:flex; flex-direction:column; line-height:1.1; margin-left: 8px;">
+                        <div class="logo-text" style="font-size: 1.4rem; letter-spacing: -0.5px;"><span
+                                style="color:#009EE3">Blink</span><span style="color:#1B9B3A">lean</span></div>
+                    </div>
+                </div>
+            </a>
+            <div class="nav-links" id="navLinks">
+                <a href="services.html#home-cleaning">Home Cleaning</a>
+                <a href="services.html#vehicle-cleaning">Vehicle Cleaning</a>
+                <a href="services.html#laundry">Laundry</a>
+                <a href="services.html#recycling">Scrap & Recycling</a>
+                <a href="partner.html">Partner With Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="services-hero">
+        <div class="container">
+            <h1>Expert Clean-Tech Solutions</h1>
+            <p>Clean in a Blink, Smart Cleaning & Recycling tailored for your lifestyle.</p>
+        </div>
+    </header>
+
+    <!-- House Cleaning Services -->
+    <section id="home-cleaning" class="category-section">
+        <div class="container">
+            <div class="category-header">
+                <h2>1. HOUSE CLEANING SERVICES</h2>
+                <p>Professional residential and commercial cleaning solutions.</p>
+            </div>
+
+            <h3 class="sub-category-title"><i data-lucide="home"></i> Home Cleaning</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1527515637462-cff94eecc1ac?auto=format&fit=crop&q=80&w=600"
+                            alt="1BHK Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>1BHK Cleaning</h3>
+                        <span class="price-tag">₹1,499</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1560448204-e02f11c3d0e2?auto=format&fit=crop&q=80&w=600"
+                            alt="2BHK Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>2BHK Cleaning</h3>
+                        <span class="price-tag">₹2,199</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1540518614846-7eded433c457?auto=format&fit=crop&q=80&w=600"
+                            alt="3BHK Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>3BHK Cleaning</h3>
+                        <span class="price-tag">₹2,999</span>
+                    </div>
+                </div>
+            </div>
+
+            <h3 class="sub-category-title" style="margin-top: 40px;"><i data-lucide="sparkles"></i> Deep Cleaning</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1584622781564-1d987f7333c1?auto=format&fit=crop&q=80&w=600"
+                            alt="Kitchen Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>Kitchen Cleaning</h3>
+                        <span class="price-tag">₹1,299</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1584622650111-993a426fbf0a?auto=format&fit=crop&q=80&w=600"
+                            alt="Bathroom Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>Bathroom Cleaning</h3>
+                        <span class="price-tag">₹599 <small>/bath</small></span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&q=80&w=600"
+                            alt="Sofa Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>Sofa Cleaning</h3>
+                        <span class="price-tag">₹399 <small>/seat</small></span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1558317374-067fb5f30001?auto=format&fit=crop&q=80&w=600"
+                            alt="Carpet Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>Carpet Cleaning</h3>
+                        <p>Industrial grade deep cleaning and drying for carpets.</p>
+                        <span class="price-tag">₹25 <small>/sq.ft</small></span>
+                    </div>
+
+                </div>
+            </div>
+
+            <h3 class="sub-category-title" style="margin-top: 40px;"><i data-lucide="building"></i> Office Cleaning</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/office_cleaning.png" alt="Office Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>Commercial Office Cleaning</h3>
+
+                        <span class="price-tag">₹3 <small>/sq.ft</small></span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vehicle Cleaning Services -->
+    <section id="vehicle-cleaning" class="category-section" style="background: #fafafa;">
+        <div class="container">
+            <div class="category-header">
+                <h2>2. VEHICLE CLEANING SERVICES</h2>
+                <p>Doorstep eco-friendly detailing for all your rides.</p>
+
+                <div
+                    style="background: #eef2ff; color: #3730a3; padding: 15px 20px; border-radius: 8px; border-left: 4px solid #4f46e5; margin-top: 20px; text-align: left; font-weight: 500; font-size: 0.95rem;">
+                    <i data-lucide="info" style="display: inline-block; vertical-align: middle; margin-right: 8px;"></i>
+                    We provide Waterless Cleaning Services for Car, Bike, Auto & Cycle. We do not offer water wash or
+                    foam wash services.
+                </div>
+            </div>
+
+            <h3 class="sub-category-title" style="margin-top: 40px;"><i data-lucide="car"></i> Car Cleaning</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1601362840469-51e4d8d58785?auto=format&fit=crop&q=80&w=600"
+                            alt="Waterless Exterior Clean">
+                    </div>
+                    <div class="service-body">
+                        <h3>Waterless Exterior</h3>
+
+                        <span class="price-tag">₹299</span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1517524008697-84bbe3c3fd98?auto=format&fit=crop&q=80&w=600"
+                            alt="Interior + Exterior">
+                    </div>
+                    <div class="service-body">
+                        <h3>Interior + Exterior</h3>
+
+                        <span class="price-tag">₹499</span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/premium_polish.png" alt="Premium Polish">
+                    </div>
+                    <div class="service-body">
+                        <h3>Premium Polish</h3>
+
+                        <span class="price-tag">₹699</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <h3 class="sub-category-title" style="margin-top: 40px;"><i data-lucide="bike"></i> Bike & Others</h3>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1558981403-c5f9899a28bc?auto=format&fit=crop&q=80&w=600"
+                            alt="Bike Waterless Wash">
+                    </div>
+                    <div class="service-body">
+                        <h3>🏍 Bike Waterless Clean</h3>
+                        <span class="price-tag">₹149</span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/bike_premium_polish.png" alt="Bike Premium Polish">
+                    </div>
+                    <div class="service-body">
+                        <h3>🏍 Bike Premium Polish</h3>
+                        <span class="price-tag">₹249</span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="assets/images/auto_full_cleaning.png" alt="Auto Full Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>🛺 Auto Full Cleaning</h3>
+                        <span class="price-tag">₹299</span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1541625602330-2277a4c46182?auto=format&fit=crop&q=80&w=600"
+                            alt="Cycle Basic Wash">
+                    </div>
+                    <div class="service-body">
+                        <h3>🚲 Cycle Basic Wash</h3>
+                        <span class="price-tag">₹99</span>
+                    </div>
+
+                </div>
+            </div>
+            <p style="margin-top: 30px; text-align: center; color: var(--text-muted); font-style: italic;">Future:
+                Monthly subscription model coming soon!</p>
+        </div>
+    </section>
+
+    <!-- Laundry Services -->
+    <section id="laundry" class="category-section">
+        <div class="container">
+            <div class="category-header">
+                <h2>3. LAUNDRY SERVICES</h2>
+                <span class="badge-pickup"><i data-lucide="truck"></i> Pickup & Drop Available</span>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-img" style="height: 180px;">
+                        <img src="assets/images/wash_and_fold.png" alt="Wash & Fold">
+                    </div>
+                    <div class="service-body">
+                        <h3>Wash & Fold</h3>
+
+                        <span class="price-tag">₹79 <small>/kg</small></span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="height: 180px;">
+                        <img src="https://images.unsplash.com/photo-1582735689369-4fe89db7114c?auto=format&fit=crop&q=80&w=600"
+                            alt="Wash & Iron">
+                    </div>
+                    <div class="service-body">
+                        <h3>Wash & Iron</h3>
+
+                        <span class="price-tag">₹99 <small>/kg</small></span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="height: 180px;">
+                        <img src="https://images.unsplash.com/photo-1517677208171-0bc6725a3e60?auto=format&fit=crop&q=80&w=600"
+                            alt="Steam Iron">
+                    </div>
+                    <div class="service-body">
+                        <h3>Steam Iron</h3>
+
+                        <span class="price-tag">₹10 <small>/cloth</small></span>
+                    </div>
+
+                </div>
+                <div class="service-card">
+                    <div class="service-img" style="height: 180px;">
+                        <img src="assets/images/dry_clean.png" alt="Dry Cleaning">
+                    </div>
+                    <div class="service-body">
+                        <h3>Dry Cleaning</h3>
+
+                        <span class="price-tag">Starts ₹149</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Scrap & Recycling Services -->
+    <section id="recycling" class="category-section" style="background: #f0fdf4;">
+        <div class="container">
+            <div class="category-header">
+                <i data-lucide="recycle"
+                    style="color: var(--primary); width: 48px; height: 48px; margin-bottom: 10px;"></i>
+                <h2>4. SCRAP & RECYCLING SERVICES</h2>
+                <p>Monetize your waste and save the planet. Smart collection at your doorstep.</p>
+            </div>
+
+            <div class="market-note">
+                <strong><i data-lucide="info"></i> Market Rates:</strong> Items (Newspaper, Plastic, Iron, E-Waste,
+                Cardboard) are priced based on the current market price per kg.
+            </div>
+
+            <div class="coverage-areas"
+                style="margin-bottom: 30px; background: white; padding: 20px; border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); border: 1px solid rgba(0,0,0,0.05);">
+                <h4 style="color: var(--primary); margin-bottom: 15px; display: flex; align-items: center; gap: 10px;">
+                    <i data-lucide="map-pin"></i> Primary Service Zones
+                </h4>
+                <div
+                    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; font-size: 0.9rem;">
+                    <span style="display: flex; align-items: center; gap: 5px;"><i data-lucide="check"
+                            style="width: 14px; color: var(--primary);"></i> Whitefield</span>
+                    <span style="display: flex; align-items: center; gap: 5px;"><i data-lucide="check"
+                            style="width: 14px; color: var(--primary);"></i> Indiranagar</span>
+                    <span style="display: flex; align-items: center; gap: 5px;"><i data-lucide="check"
+                            style="width: 14px; color: var(--primary);"></i> Koramangala</span>
+                    <span style="display: flex; align-items: center; gap: 5px;"><i data-lucide="check"
+                            style="width: 14px; color: var(--primary);"></i> HSR Layout</span>
+                    <span style="display: flex; align-items: center; gap: 5px;"><i data-lucide="check"
+                            style="width: 14px; color: var(--primary);"></i> Jayanagar</span>
+                    <span style="display: flex; align-items: center; gap: 5px;"><i data-lucide="check"
+                            style="width: 14px; color: var(--primary);"></i> Marathahalli</span>
+                    <span style="display: flex; align-items: center; gap: 5px;"><i data-lucide="check"
+                            style="width: 14px; color: var(--primary);"></i> Electronic City</span>
+                    <span style="display: flex; align-items: center; gap: 5px;"><i data-lucide="check"
+                            style="width: 14px; color: var(--primary);"></i> Bellandur</span>
+                </div>
+            </div>
+
+            <div style="text-align: center; margin-top: 40px;">
+                <a href="https://wa.me/917022803582?text=Hello%20Blinklean%21%20I%20would%20like%20to%20schedule%20a%20scrap%20pickup.%0A%0A*Name*%3A%20%0A*Phone*%3A%20%0A*Complete%20Address*%3A%20%0A*Items%20to%20Sell*%20%28e.g.%2C%20Newspaper%2C%20Plastic%2C%20Metal%29%3A%20%0A*Approximate%20Weight*%3A%20%0A%0APlease%20confirm%20the%20booking."
+                    target="_blank" class="btn btn-primary"
+                    style="padding: 16px 40px; font-size: 1.1rem; display: inline-flex; align-items: center; gap: 10px;">
+                    <i data-lucide="shopping-basket"></i> Sell Your Scrap Now
+                </a>
+            </div>
+            <p style="margin-top: 15px; font-size: 0.8rem; color: var(--text-muted); text-align: center;">*Serving all
+                major areas in
+                Bangalore. Check availability for your specific pincode on the home page.</p>
+
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-body">
+                        <h3>Residential Pickup</h3>
+                        <p>Independent houses & villas.</p>
+                        <span class="badge-pickup">Available: All Zones</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-body">
+                        <h3>Apartment Bulk</h3>
+                        <p>Gated communities & societies.</p>
+                        <span class="badge-pickup">Available: East & South BLR</span>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-body">
+                        <h3>Office Scrap Disposal</h3>
+                        <p>IT parks & commercial hubs.</p>
+                        <span class="badge-pickup">Available: All Zones</span>
+                    </div>
+                </div>
+            </div>
+            <div class="future-plan-box"
+                style="margin-top:40px; text-align:center; padding:30px; border:2px dashed var(--primary); border-radius:var(--radius-lg); background: white;">
+                <i data-lucide="brain" style="color:var(--primary); width:48px; height:48px; margin-bottom:15px;"></i>
+                <h4 style="color:var(--primary); margin-bottom:10px; font-size:1.2rem;">Sustainability Tracking & AI
+                    Categorization</h4>
+                <p style="color:var(--text-muted); font-size:0.95rem; max-width:600px; margin: 0 auto;">Our future
+                    roadmap includes AI-based waste categorization and sustainability tracking to help you measure your
+                    environmental impact.</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 Blinklean. AI Powered Clean-Tech Platform</p>
+        </div>
+    </footer>
+
+    <script>
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+
+        // Magnetic Button Effect
+        const magneticButtons = document.querySelectorAll('.btn-primary, .btn-full');
+        magneticButtons.forEach(btn => {
+            btn.addEventListener('mousemove', (e) => {
+                const position = btn.getBoundingClientRect();
+                const x = e.clientX - position.left - position.width / 2;
+                const y = e.clientY - position.top - position.height / 2;
+                btn.style.transform = `translate(${x * 0.3}px, ${y * 0.5}px)`;
+            });
+            btn.addEventListener('mouseleave', () => {
+                btn.style.transform = 'translate(0px, 0px)';
+            });
+        });
+
+        // Page Scroll Progress Bar
+        const scrollProgress = document.createElement('div');
+        scrollProgress.style.cssText = `
+            position: fixed; top: 0; left: 0; height: 3px;
+            background: linear-gradient(to right, #009EE3, #1B9B3A);
+            z-index: 10001; transition: width 0.1s ease; width: 0%;
+        `;
+        document.body.appendChild(scrollProgress);
+
+        window.addEventListener('scroll', () => {
+            const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (winScroll / height) * 100;
+            scrollProgress.style.width = scrolled + "%";
+        });
+    </script>
+
+    <!-- AI Chatbot Interface -->
+    <div class="chat-widget" id="chatWidget">
+        <div class="chat-header">
+            <div class="chat-brand">
+                <img src="https://cdn-icons-png.flaticon.com/512/8943/8943377.png" alt="AI Agent">
+                <div>
+                    <strong>Blinklean AI</strong>
+                    <span>Online</span>
+                </div>
+            </div>
+            <button class="close-chat" onclick="toggleChat()"><i data-lucide="x"></i></button>
+        </div>
+        <div class="chat-body" id="chatBody">
+            <div class="message ai-message">
+                Hi! I'm your Blinklean AI Assistant. How can I help you today?
+            </div>
+        </div>
+        <div class="chat-faq-options" id="faqOptions">
+            <button onclick="sendFAQ('How much does home cleaning cost?')">Home Cleaning Cost</button>
+            <button onclick="sendFAQ('Do you offer waterless car wash?')">Vehicle Cleaning</button>
+            <button onclick="sendFAQ('How to sell scrap?')">Sell Scrap</button>
+        </div>
+        <div class="chat-input-area">
+            <input type="text" id="chatInput" placeholder="Type your message..." onkeypress="handleKeyPress(event)">
+            <button onclick="sendMessage()"><i data-lucide="send" style="width: 20px; height: 20px;"></i></button>
+        </div>
+    </div>
+
+    <!-- AI Chatbot Button -->
+    <div class="chatbot-btn" onclick="toggleChat()"
+        style="display: flex; align-items: center; justify-content: center;">
+        <img src="https://cdn-icons-png.flaticon.com/512/8943/8943377.png" alt="Chatbot"
+            style="width: 32px; height: 32px; filter: brightness(0) invert(1);">
+    </div>
+
+    <style>
+        .chatbot-btn {
+            position: fixed;
+            bottom: 24px;
+            right: 24px;
+            background: linear-gradient(135deg, var(--primary), var(--primary-light));
+            width: 65px;
+            height: 65px;
+            border-radius: 50%;
+            box-shadow: 0 4px 20px rgba(15, 76, 63, 0.4);
+            cursor: pointer;
+            z-index: 10000;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .chatbot-btn:hover {
+            transform: scale(1.08) translateY(-5px);
+            box-shadow: 0 8px 25px rgba(15, 76, 63, 0.5);
+        }
+
+        .chat-widget {
+            position: fixed;
+            bottom: 100px;
+            right: 24px;
+            width: 350px;
+            height: 480px;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+            z-index: 9999;
+            display: none;
+            flex-direction: column;
+            overflow: hidden;
+            border: 1px solid rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.3s, transform 0.3s;
+        }
+
+        .chat-widget.active {
+            display: flex;
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        .chat-header {
+            background: var(--primary);
+            color: white;
+            padding: 15px 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chat-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .chat-brand img {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            background: white;
+            padding: 4px;
+        }
+
+        .chat-brand div {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .chat-brand strong {
+            font-size: 1.1rem;
+        }
+
+        .chat-brand span {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.8);
+        }
+
+        .close-chat {
+            background: none;
+            border: none;
+            color: white;
+            cursor: pointer;
+            opacity: 0.8;
+            transition: opacity 0.2s;
+        }
+
+        .close-chat:hover {
+            opacity: 1;
+        }
+
+        .chat-body {
+            flex: 1;
+            padding: 20px;
+            overflow-y: auto;
+            background: #f8fafc;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .message {
+            max-width: 85%;
+            padding: 12px 16px;
+            border-radius: 15px;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .ai-message {
+            background: white;
+            color: var(--text-main);
+            align-self: flex-start;
+            border-bottom-left-radius: 4px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.02);
+        }
+
+        .user-message {
+            background: var(--primary);
+            color: white;
+            align-self: flex-end;
+            border-bottom-right-radius: 4px;
+        }
+
+        .chat-faq-options {
+            padding: 10px 15px;
+            background: #f8fafc;
+            display: flex;
+            gap: 8px;
+            overflow-x: auto;
+            scrollbar-width: none;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        .chat-faq-options::-webkit-scrollbar {
+            display: none;
+        }
+
+        .chat-faq-options button {
+            white-space: nowrap;
+            padding: 8px 15px;
+            background: white;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .chat-faq-options button:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        .chat-input-area {
+            padding: 15px;
+            background: white;
+            border-top: 1px solid #f1f5f9;
+            display: flex;
+            gap: 10px;
+        }
+
+        .chat-input-area input {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #e2e8f0;
+            border-radius: 20px;
+            outline: none;
+            font-size: 0.95rem;
+        }
+
+        .chat-input-area button {
+            background: var(--primary);
+            color: white;
+            border: none;
+            width: 42px;
+            height: 42px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .chat-input-area button:hover {
+            transform: scale(1.05);
+        }
+
+        @media(max-width: 768px) {
+            .chatbot-btn {
+                bottom: 20px;
+                right: 20px;
+                width: 55px;
+                height: 55px;
+            }
+
+            .chat-widget {
+                bottom: 85px;
+                right: 15px;
+                left: 15px;
+                width: auto;
+                height: 60vh;
+            }
+        }
+    </style>
+    <script>
+        function toggleChat() {
+            const widget = document.getElementById('chatWidget');
+            if (widget.classList.contains('active')) {
+                widget.classList.remove('active');
+                setTimeout(() => widget.style.display = 'none', 300);
+            } else {
+                widget.style.display = 'flex';
+                setTimeout(() => widget.classList.add('active'), 10);
+            }
+        }
+
+        function handleKeyPress(e) {
+            if (e.key === 'Enter') {
+                sendMessage();
+            }
+        }
+
+        function sendFAQ(text) {
+            document.getElementById('chatInput').value = text;
+            sendMessage();
+            document.getElementById('faqOptions').style.display = 'none';
+        }
+
+        function sendMessage() {
+            const input = document.getElementById('chatInput');
+            const text = input.value.trim();
+            if (!text) return;
+
+            // Add user message
+            appendMessage(text, 'user-message');
+            input.value = '';
+
+            // Bot response logic
+            setTimeout(() => {
+                let response = "I'm still learning! For urgent help, please WhatsApp us at 7022803582.";
+                const lowerText = text.toLowerCase();
+
+                if (lowerText.includes('cost') || lowerText.includes('price')) {
+                    response = "Our Home Cleaning starts at ₹499 and Vehicle Cleaning at ₹99. Would you like to view our full Services page?";
+                } else if (lowerText.includes('waterless') || lowerText.includes('car')) {
+                    response = "Yes! We specialize in premium waterless car and bike wash starting from ₹99. All eco-friendly!";
+                } else if (lowerText.includes('scrap') || lowerText.includes('recycle')) {
+                    response = "You can sell Newspapers, Plastics, E-Waste and Metal to us for cash! Just tap 'Scrap & Recycling' on the top menu to schedule a pickup.";
+                } else if (lowerText.includes('hello') || lowerText.includes('hi')) {
+                    response = "Hello! I'm ready to assist you. Are you looking to clean your home, vehicle, or sell scrap today?";
+                }
+
+                appendMessage(response, 'ai-message');
+                if (typeof lucide !== 'undefined') lucide.createIcons();
+            }, 1000);
+        }
+
+        function appendMessage(text, className) {
+            const body = document.getElementById('chatBody');
+            const msg = document.createElement('div');
+            msg.className = `message ${className}`;
+            msg.innerText = text;
+            body.appendChild(msg);
+            body.scrollTop = body.scrollHeight;
+        }
+    </script>
+    <!-- Floating WhatsApp Button -->
+    <div class="whatsapp-float-container">
+        <span class="whatsapp-tooltip">Chat with us on WhatsApp</span>
+        <a href="https://wa.me/917022803582?text=Hello%20Blinklean%2C%20I%20am%20interested%20in%20your%20cleaning%20or%20scrap%20recycling%20services."
+            class="whatsapp-float-btn" target="_blank" aria-label="Contact us on WhatsApp">
+            <i data-lucide="message-circle"></i>
+        </a>
+    </div>
+
+    <script>
+        if (typeof lucide !== 'undefined') {
+            lucide.createIcons();
+        }
+    </script>
+</body>
+
+</html>
