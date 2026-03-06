@@ -1,7 +1,7 @@
 ﻿/* --- Professional Footer Styles --- */
 .footer-premium {
-    background: #0f172a;
-    color: #f8fafc;
+    background: #ffffff;
+    color: var(--text-main);
     padding: 80px 0 0;
     font-family: 'Outfit', sans-serif;
 }
@@ -15,7 +15,7 @@
 
 .footer-col h3,
 .footer-col h4 {
-    color: white;
+    color: var(--primary);
     font-size: 1.25rem;
     font-weight: 700;
     margin-bottom: 25px;
@@ -46,7 +46,7 @@
 }
 
 .footer-desc {
-    color: #94a3b8;
+    color: var(--text-muted);
     line-height: 1.7;
     margin-bottom: 25px;
     font-size: 0.95rem;
@@ -60,12 +60,12 @@
 .footer-social a {
     width: 36px;
     height: 36px;
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(15, 76, 63, 0.05);
     display: flex;
     align-items: center;
     justify-content: center;
     border-radius: 8px;
-    color: #f8fafc;
+    color: var(--primary);
     transition: all 0.3s ease;
 }
 
@@ -86,7 +86,7 @@
 }
 
 .footer-links-list a {
-    color: #94a3b8;
+    color: var(--text-muted);
     text-decoration: none;
     transition: all 0.3s ease;
     display: inline-flex;
@@ -109,7 +109,7 @@
 .contact-item {
     display: flex;
     gap: 12px;
-    color: #94a3b8;
+    color: var(--text-muted);
     font-size: 0.95rem;
 }
 
@@ -125,18 +125,18 @@
 }
 
 .contact-item a:hover {
-    color: white;
+    color: var(--primary);
 }
 
 .footer-bottom {
-    background: rgba(0, 0, 0, 0.2);
+    background: var(--background);
     padding: 25px 0;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    border-top: 1px solid rgba(15, 76, 63, 0.1);
 }
 
 .footer-bottom p {
-    color: #64748b;
+    color: var(--text-muted);
     font-size: 0.9rem;
     margin: 0;
 }
