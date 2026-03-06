@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="service-areas.css">
     <link rel="stylesheet" href="how-it-works-v2.css">
     <link rel="stylesheet" href="testimonials.css">
+    <link rel="stylesheet" href="faq.css">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="hero-premium.css">
     <link rel="stylesheet" href="how-it-works-premium.css">
@@ -495,6 +496,90 @@
                         <div class="author-info">
                             <h4>Arjun Reddy</h4>
                             <span>Verified Customer</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="faq-section reveal">
+        <div class="container">
+            <div class="faq-container">
+                <div class="section-header">
+                    <h2>Frequently Asked Questions</h2>
+                    <p>Find answers to common questions about BlinkClean services.</p>
+                </div>
+
+                <div class="faq-list">
+                    <!-- Q1 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <h3>What services does BlinkClean provide?</h3>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-content">
+                            <div class="faq-content-inner">
+                                BlinkClean provides home cleaning, vehicle cleaning, laundry services, and scrap
+                                recycling services across Bangalore.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q2 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <h3>Which areas do you serve?</h3>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-content">
+                            <div class="faq-content-inner">
+                                BlinkClean currently serves Bangalore and nearby areas with professional doorstep
+                                cleaning and recycling services.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q3 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <h3>How can I book a scrap recycling service?</h3>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-content">
+                            <div class="faq-content-inner">
+                                You can contact BlinkClean directly through WhatsApp to schedule scrap pickup and
+                                receive payment for recyclable materials.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q4 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <h3>Do you provide eco-friendly cleaning?</h3>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-content">
+                            <div class="faq-content-inner">
+                                Yes. BlinkClean focuses on environmentally friendly practices, including waterless
+                                vehicle cleaning and responsible recycling.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Q5 -->
+                    <div class="faq-item">
+                        <div class="faq-header">
+                            <h3>Will services be available through an app?</h3>
+                            <i data-lucide="chevron-down" class="faq-icon"></i>
+                        </div>
+                        <div class="faq-content">
+                            <div class="faq-content-inner">
+                                Yes. BlinkClean is developing a mobile app where users will be able to book and manage
+                                cleaning services easily.
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -1415,6 +1500,23 @@
                 body.appendChild(msg);
                 body.scrollTop = body.scrollHeight;
             }
+            // FAQ Accordion Handler
+            document.querySelectorAll('.faq-header').forEach(header => {
+                header.addEventListener('click', () => {
+                    const item = header.parentElement;
+                    const isActive = item.classList.contains('active');
+
+                    // Close all other items
+                    document.querySelectorAll('.faq-item').forEach(otherItem => {
+                        otherItem.classList.remove('active');
+                    });
+
+                    // Toggle current item
+                    if (!isActive) {
+                        item.classList.add('active');
+                    }
+                });
+            });
         </script>
 </body>
 
