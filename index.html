@@ -24,6 +24,7 @@
     <link rel="stylesheet" href="trust-section.css">
     <link rel="stylesheet" href="trending-services.css">
     <link rel="stylesheet" href="subscriptions.css">
+    <link rel="stylesheet" href="footer-premium.css">
     <link rel="stylesheet" href="testimonials-premium.css">
     <style>
         .modal {
@@ -1243,49 +1244,79 @@
 
 
 
-        <footer class="footer">
-            <div class="container footer-grid">
-                <div class="footer-brand">
-                    <div style="display:flex; align-items:center;">
-                        <svg width="40" height="40" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <footer class="footer-premium">
+            <div class="container footer-grid-premium">
+                <!-- Column 1: Company -->
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <svg width="32" height="32" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
                             <circle cx="50" cy="50" r="48" fill="#009EE3" />
                             <path d="M 50 13 Q 50 28 35 28 Q 50 28 50 43 Q 50 28 65 28 Q 50 28 50 13 Z" fill="white" />
                             <path d="M 2 50 Q 50 30 98 50 A 48 48 0 0 1 2 50" fill="#1B9B3A" />
                             <path d="M 0 50 Q 50 30 100 50" fill="none" stroke="white" stroke-width="5" />
-                            <path d="M 15 80 Q 40 50 85 55" fill="none" stroke="white" stroke-width="4"
-                                stroke-linecap="round" />
                         </svg>
-                        <div style="display:flex; flex-direction:column; line-height:1.1; margin-left: 8px;">
-                            <div class="logo-text" style="font-size: 1.4rem; letter-spacing: -0.5px;"><span
-                                    style="color:#009EE3">Blink</span><span style="color:#1B9B3A">lean</span></div>
-                            <div style="font-size: 0.8rem; color:#009EE3; font-weight: 500;">Clean in a Blink</div>
+                        <div class="logo-text"><span style="color:#009EE3">Blink</span><span
+                                style="color:#1B9B3A">lean</span></div>
+                    </div>
+                    <p class="footer-desc">BlinkClean provides reliable home cleaning, vehicle cleaning, laundry, and
+                        scrap recycling services across Bangalore.</p>
+                    <div class="footer-social">
+                        <a href="#" target="_blank"><i data-lucide="instagram"></i></a>
+                        <a href="#" target="_blank"><i data-lucide="facebook"></i></a>
+                        <a href="#" target="_blank"><i data-lucide="linkedin"></i></a>
+                        <a href="https://wa.me/917022803582" target="_blank"><i data-lucide="message-circle"></i></a>
+                    </div>
+                </div>
+
+                <!-- Column 2: Services -->
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="#services">Home Cleaning</a></li>
+                        <li><a href="#services">Vehicle Cleaning</a></li>
+                        <li><a href="#services">Laundry Services</a></li>
+                        <li><a href="#services">Scrap Recycling</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 3: Quick Links -->
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links-list">
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="#faq">FAQ</a></li>
+                        <li><a href="#app-promo">Download App (Soon)</a></li>
+                    </ul>
+                </div>
+
+                <!-- Column 4: Contact Information -->
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <div class="footer-contact-info">
+                        <div class="contact-item">
+                            <i data-lucide="map-pin"></i>
+                            <span>Bangalore, India</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="mail"></i>
+                            <a href="mailto:support@blinkclean.com">support@blinkclean.com</a>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="phone"></i>
+                            <span>+91 XXXXX XXXXX</span>
+                        </div>
+                        <div class="contact-item">
+                            <i data-lucide="message-square"></i>
+                            <a href="https://wa.me/917022803582" target="_blank">WhatsApp Contact</a>
                         </div>
                     </div>
-                    <div class="social-links">
-                        <a href="https://www.instagram.com/p/DU7uAgDE5U5/?utm_source=ig_web_copy_link&igsh=NTc4MTIwNjQ2YQ=="
-                            target="_blank"><i data-lucide="instagram"></i></a>
-                        <a href="https://www.linkedin.com/posts/malnad-manju-cafe_blinklean-startupindia-cleantech-activity-7429870434927448064-WCmG?utm_source=share&utm_medium=member_desktop&rcm=ACoAAFcir08BrzVapR6lEqBitqVDVd4Q2ypNtvI"
-                            target="_blank"><i data-lucide="linkedin"></i></a>
-                        <a href="#"><i data-lucide="twitter"></i></a>
-                    </div>
                 </div>
-                <div class="footer-links">
-                    <h4>Company</h4>
-                    <a href="about.html">About Us</a>
-                    <a href="contact.html">Contact Us</a>
-                    <a href="services.html">All Services</a>
-                    <a href="partner.html">Partner With Us</a>
-                </div>
-                <div class="footer-links">
-                    <h4>Legal</h4>
-                    <div style="display: flex; flex-direction: column; gap: 12px;">
-                        <a href="terms-and-conditions.html">Terms of Use</a>
-                        <a href="privacy-policy.html">Privacy Policy</a>
-                        <a href="equal-opportunity-policy.html">Equal Opportunity Policy</a>
-                        <a href="refund-and-cancellation-policy.html">Refund & Cancellation Policy</a>
-                        <a href="vulnerability-disclosure-policy.html">Vulnerability Disclosure Policy</a>
-                        <a href="#">Annual Return</a>
-                    </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div class="container">
+                    <p>&copy; 2026 BlinkClean. All rights reserved.</p>
                 </div>
             </div>
         </footer>
