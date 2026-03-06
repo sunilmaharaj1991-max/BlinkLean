@@ -1,0 +1,123 @@
+/* --- How BlinkClean Works (V2) --- */
+.process-section {
+    padding: 100px 0;
+    background-color: #ffffff;
+}
+
+.process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 60px;
+    position: relative;
+}
+
+/* Connecting line for desktop */
+@media (min-width: 992px) {
+    .process-grid::after {
+        content: '';
+        position: absolute;
+        top: 45px;
+        left: 10%;
+        right: 10%;
+        height: 2px;
+        background: repeating-linear-gradient(to right, #1B9B3A, #1B9B3A 5px, transparent 5px, transparent 10px);
+        z-index: 0;
+        opacity: 0.2;
+    }
+}
+
+.process-step {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+.process-step:hover {
+    transform: translateY(-5px);
+}
+
+.step-icon-box {
+    width: 90px;
+    height: 90px;
+    background: #ffffff;
+    border: 2px solid rgba(27, 155, 58, 0.1);
+    color: #1B9B3A;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 24px;
+    box-shadow: 0 10px 20px rgba(15, 76, 63, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.process-step:hover .step-icon-box {
+    border-color: #1B9B3A;
+    background: #1B9B3A;
+    color: #ffffff;
+    transform: scale(1.1);
+    box-shadow: 0 15px 30px rgba(27, 155, 58, 0.2);
+}
+
+.step-icon-box i {
+    width: 40px;
+    height: 40px;
+}
+
+.step-number-badge {
+    position: absolute;
+    top: -5px;
+    right: -5px;
+    width: 30px;
+    height: 30px;
+    background: #1B9B3A;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.85rem;
+    font-weight: 800;
+    border: 3px solid white;
+}
+
+.process-step h3 {
+    font-size: 1.35rem;
+    margin-bottom: 12px;
+    color: var(--primary);
+    font-weight: 700;
+}
+
+.process-step p {
+    font-size: 1rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    padding: 0 10px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    .process-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .process-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+    .process-step {
+        max-width: 300px;
+        margin: 0 auto;
+    }
+
+    .process-section {
+        padding: 60px 0;
+    }
+}
