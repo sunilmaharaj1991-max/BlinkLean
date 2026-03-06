@@ -11,6 +11,15 @@
         rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <link rel="stylesheet" href="style.css">
+    <!-- Google Analytics GA4 -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-B5LKLN2026"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-B5LKLN2026', { 'enhanced_measurement': true });
+    </script>
+    <script src="blink-analytics.js" defer></script>
     <style>
         body {
             background-color: #f8fafc;
@@ -300,7 +309,7 @@
                     <div class="form-group">
                         <label>Phone Number</label>
                         <i data-lucide="phone" class="form-icon"></i>
-                        <input type="tel" placeholder="9876543210" pattern="[0-9]{10}" required id="phone-input">
+                        <input type="tel" placeholder="7022803582" pattern="[0-9]{10}" required id="phone-input">
                     </div>
                     <button type="button" class="btn-login" onclick="sendOTP()">Get OTP</button>
                 </div>
@@ -700,7 +709,7 @@
 
             // Bot response logic
             setTimeout(() => {
-                let response = "I'm still learning! For urgent help, please WhatsApp us at 9876543210.";
+                let response = "I'm still learning! For urgent help, please WhatsApp us at 7022803582.";
                 const lowerText = text.toLowerCase();
 
                 if (lowerText.includes('cost') || lowerText.includes('price')) {
