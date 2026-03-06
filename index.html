@@ -6,6 +6,117 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Blinklean</title>
     <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+
+    <!-- Structured Data Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "CleaningService",
+          "name": "BlinkClean",
+          "description": "BlinkClean provides home cleaning, vehicle cleaning, laundry services, and scrap recycling services across Bangalore.",
+          "url": "https://blinkclean.com",
+          "logo": "https://blinkclean.com/assets/images/favicon.svg",
+          "telephone": "+91 00000 00000",
+          "email": "support@blinkclean.com",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bangalore",
+            "addressRegion": "Karnataka",
+            "addressCountry": "India"
+          },
+          "areaServed": {
+            "@type": "AdministrativeArea",
+            "name": "Bangalore"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "telephone": "+91 00000 00000",
+            "contactType": "Customer Support"
+          },
+          "sameAs": [
+            "https://www.instagram.com",
+            "https://www.facebook.com",
+            "https://www.linkedin.com"
+          ]
+        },
+        {
+          "@type": "Service",
+          "name": "Home Cleaning",
+          "description": "Professional cleaning for kitchens, bathrooms, bedrooms and full house interiors.",
+          "provider": { "@type": "Organization", "name": "BlinkClean" },
+          "areaServed": "Bangalore"
+        },
+        {
+          "@type": "Service",
+          "name": "Vehicle Cleaning",
+          "description": "Waterless cleaning service for cars, bikes, autos and bicycles.",
+          "provider": { "@type": "Organization", "name": "BlinkClean" },
+          "areaServed": "Bangalore"
+        },
+        {
+          "@type": "Service",
+          "name": "Laundry Services",
+          "description": "Washing, folding and steam ironing services handled by professionals.",
+          "provider": { "@type": "Organization", "name": "BlinkClean" },
+          "areaServed": "Bangalore"
+        },
+        {
+          "@type": "Service",
+          "name": "Scrap Recycling",
+          "description": "Sell your recyclable scrap materials and get paid cash instantly at your doorstep.",
+          "provider": { "@type": "Organization", "name": "BlinkClean" },
+          "areaServed": "Bangalore"
+        },
+        {
+          "@type": "FAQPage",
+          "mainEntity": [
+            {
+              "@type": "Question",
+              "name": "What services does BlinkClean provide?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "BlinkClean provides home cleaning, vehicle cleaning, laundry services, and scrap recycling services across Bangalore."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Which areas do you serve?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "BlinkClean currently serves Bangalore and nearby areas with professional doorstep cleaning and recycling services."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "How can I book a scrap recycling service?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can contact BlinkClean directly through WhatsApp to schedule scrap pickup and receive payment for recyclable materials."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Do you provide eco-friendly cleaning?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. BlinkClean focuses on environmentally friendly practices, including waterless vehicle cleaning and responsible recycling."
+              }
+            },
+            {
+              "@type": "Question",
+              "name": "Will services be available through an app?",
+              "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. BlinkClean is developing a mobile app where users will be able to book and manage cleaning services easily."
+              }
+            }
+          ]
+        }
+      ]
+    }
+    </script>
     <!-- Montserrat and Outfit fonts -->
     <link
         href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Caveat:wght@400;700&display=swap"
