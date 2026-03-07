@@ -16,7 +16,8 @@
     position: relative;
     border-radius: 30px;
     overflow: hidden;
-    box-shadow: 0 20px 40px rgba(15, 76, 63, 0.05);
+    box-shadow: 0 30px 60px rgba(15, 76, 63, 0.1);
+    animation: float 6s ease-in-out infinite;
 }
 
 .service-areas-visual img {
@@ -45,7 +46,7 @@
 
 .locations-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(4, 1fr);
     gap: 20px;
     margin-bottom: 48px;
 }
@@ -61,88 +62,8 @@
 }
 
 .location-item:hover {
-    transform: translateY(-5px);
-    background: white;
-    box-shadow: 0 10px 20px rgba(0, 158, 227, 0.1);
-    color: var(--primary);
-}
-
-.area-badge {
-    background: linear-gradient(135deg, #009EE3, #1B9B3A);
-    color: white;
-    font-size: 0.65rem;
-    padding: 2px 8px;
-    border-radius: 20px;
-    text-transform: uppercase;
-    letter-spacing: 0.5px;
-    font-weight: 800;
-}
-
-/* Premium Animations */
-.reveal-premium {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s cubic-bezier(0.2, 0.8, 0.2, 1), transform 1s cubic-bezier(0.2, 0.8, 0.2, 1);
-    will-change: transform, opacity;
-}
-
-.premium-active {
-    opacity: 1 !important;
-    transform: translateY(0) !important;
-}
-
-.stagger-reveal>* {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.premium-active.stagger-reveal>*:nth-child(1) {
-    transition-delay: 0.1s;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.premium-active.stagger-reveal>*:nth-child(2) {
-    transition-delay: 0.2s;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.premium-active.stagger-reveal>*:nth-child(3) {
-    transition-delay: 0.3s;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.premium-active.stagger-reveal>*:nth-child(4) {
-    transition-delay: 0.4s;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.premium-active.stagger-reveal>*:nth-child(5) {
-    transition-delay: 0.5s;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.premium-active.stagger-reveal>*:nth-child(6) {
-    transition-delay: 0.6s;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.premium-active.stagger-reveal>*:nth-child(7) {
-    transition-delay: 0.7s;
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.premium-active.stagger-reveal>*:nth-child(8) {
-    transition-delay: 0.8s;
-    opacity: 1;
-    transform: translateY(0);
+    transform: translateX(5px);
+    color: var(--primary-light);
 }
 
 .location-item i {
@@ -222,7 +143,7 @@
     }
 
     .locations-grid {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
         gap: 12px;
     }
 
