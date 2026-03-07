@@ -12,7 +12,8 @@
     <meta property="og:title" content="Blinklean | On-Demand Home & Vehicle Cleaning Services">
     <meta property="og:description"
         content="Blinklean is India's first AI-powered QuickClean platform offering complete doorstep home cleaning, vehicle cleaning, laundry, and scrap recycling services.">
-    <link rel="icon" type="image/svg+xml" href="assets/images/favicon.svg">
+    <link rel="icon" type="image/png" href="assets/images/favicon.png">
+    <link rel="apple-touch-icon" href="assets/images/favicon.png">
 
     <!-- Structured Data Schema Markup -->
     <script type="application/ld+json">
@@ -243,17 +244,15 @@
                     <i data-lucide="map-pin"></i>
                     <span>India's First AI Powered QuickClean Platform</span>
                 </div>
-                <h1>Complete Cleaning & Recycling Services <br><span class="handwritten">at Your Doorstep in
-                        your area</span></h1>
-                <p class="hero-subtext">Home Cleaning • Vehicle Cleaning • Laundry Services • Scrap Recycling</p>
+                <h1 class="reveal-premium">India's first AI Powered <span class="text-accent">QuickClean</span> platform
+                    in <span class="text-accent underline-effect">your area</span></h1>
+                <p class="hero-subtitle reveal-premium" style="transition-delay: 0.2s;">Professional Home Cleaning,
+                    Premium Vehicle Wash, and Smart Scrap
+                    Recycling—all in one place.</p>
 
-                <div class="hero-cta-buttons">
-                    <a href="#our-services" class="btn btn-primary btn-lg">Explore Our Services</a>
-                    <a href="https://wa.me/917022803582?text=Hello%20Blinklean%21%20I%20would%20like%20to%20schedule%20a%20scrap%20pickup."
-                        target="_blank" class="btn btn-secondary btn-lg">
-                        <i data-lucide="message-circle"></i>
-                        Sell Scrap on WhatsApp
-                    </a>
+                <div class="hero-actions reveal-premium" style="transition-delay: 0.4s;">
+                    <a href="#our-services" class="btn btn-primary">Book a Service</a>
+                    <a href="#how-it-works" class="btn btn-secondary">See How it Works</a>
                 </div>
 
                 <div class="hero-pincode-checker-centered">
@@ -379,23 +378,23 @@
     </section>
 
     <!-- Service Areas Section -->
-    <section id="service-areas" class="service-areas-section reveal">
+    <section id="service-areas" class="service-areas-section reveal-premium">
         <div class="container">
             <div class="service-areas-container">
                 <div class="service-areas-content">
-                    <h2>Serving your area with Reliable Cleaning & Recycling Services</h2>
+                    <h2 class="reveal-premium">Serving your area with Reliable Cleaning & Recycling Services</h2>
                     <p class="section-desc">Our professional team provides doorstep cleaning and recycling services
                         across your area and nearby areas.</p>
 
-                    <div class="locations-grid">
-                        <div class="location-item"><i data-lucide="map-pin"></i> Whitefield</div>
-                        <div class="location-item"><i data-lucide="map-pin"></i> Marathahalli</div>
-                        <div class="location-item"><i data-lucide="map-pin"></i> KR Puram</div>
-                        <div class="location-item"><i data-lucide="map-pin"></i> Indiranagar</div>
-                        <div class="location-item"><i data-lucide="map-pin"></i> Electronic City</div>
-                        <div class="location-item"><i data-lucide="map-pin"></i> HSR Layout</div>
-                        <div class="location-item"><i data-lucide="map-pin"></i> Yelahanka</div>
-                        <div class="location-item"><i data-lucide="map-pin"></i> BTM Layout</div>
+                    <div class="locations-grid stagger-reveal">
+                        <div class="location-item"><span class="area-badge">Hub</span> Whitefield Central</div>
+                        <div class="location-item"><span class="area-badge">Hub</span> Marathahalli Node</div>
+                        <div class="location-item"><span class="area-badge">Hub</span> KR Puram Corridor</div>
+                        <div class="location-item"><span class="area-badge">Hub</span> Indiranagar District</div>
+                        <div class="location-item"><span class="area-badge">Hub</span> Electronic City Phase-1</div>
+                        <div class="location-item"><span class="area-badge">Hub</span> HSR Smart Layout</div>
+                        <div class="location-item"><span class="area-badge">Hub</span> Yelahanka Gateway</div>
+                        <div class="location-item"><span class="area-badge">Hub</span> BTM Premier Hub</div>
                     </div>
 
                     <div class="service-areas-cta">
@@ -412,7 +411,7 @@
                 </div>
 
                 <div class="service-areas-visual">
-                    <img src="assets/images/your area_map.png" alt="your area Service Areas Illustration">
+                    <img src="assets/images/service_areas.png" alt="Blinklean Managed Service Hubs Map" loading="lazy">
                 </div>
             </div>
         </div>
@@ -1772,10 +1771,18 @@
         </div>
 
         <script>
-            // Ensure Lucide icons are rendered for the floating button
-            if (typeof lucide !== 'undefined') {
-                lucide.createIcons();
-            }
+            // Scroll Reveal Animation (Performant Observer)
+            const revealOptions = { threshold: 0.15, rootMargin: '0px 0px -50px 0px' };
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('premium-active');
+                        revealObserver.unobserve(entry.target);
+                    }
+                });
+            }, revealOptions);
+
+            document.querySelectorAll('.reveal-premium').forEach(el => revealObserver.observe(el));
         </script>
 </body>
 
