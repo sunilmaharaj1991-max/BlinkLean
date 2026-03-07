@@ -281,7 +281,7 @@
                     </div>
                     <div class="form-group">
                         <label>City</label>
-                        <input type="text" value="your area" disabled>
+                        <input type="text" value="Bangalore" disabled>
                     </div>
                 </div>
 
@@ -476,13 +476,14 @@
         }
 
         function validatePincode() {
-            const pin = document.getElementById('pincode').value;
+            const allowedPincodes = ['560040', '560072', '560010', '560098'];
+            const pin = document.getElementById('pincode').value.trim();
             const status = document.getElementById('pincode-status');
             if (pin.length === 6) {
-                if (pin.startsWith('560')) {
-                    status.innerHTML = '<span style="color: #22c55e">✓ Service available at this location</span>';
+                if (allowedPincodes.includes(pin)) {
+                    status.innerHTML = '<span style="color: #22c55e">✓ Service available in Vijayanagar Bangalore!</span>';
                 } else {
-                    status.innerHTML = '<span style="color: #ef4444">⚠ Service temporarily unavailable in this area</span>';
+                    status.innerHTML = '<span style="color: #ef4444">⚠ This area is currently unavailable</span>';
                 }
             } else {
                 status.innerHTML = '';
